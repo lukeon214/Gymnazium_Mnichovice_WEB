@@ -54,7 +54,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #003366;
+  background-color: #006297;
   padding: 10px 20px;
   color: white;
   position: sticky;
@@ -90,7 +90,7 @@ a {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #003366;
+  background-color: #003366; /* backround color */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   z-index: 1000;
@@ -117,7 +117,7 @@ a {
 }
 
 .navbar ul li a {
-  color: white;
+  color: #C1E1E3;
   font-size: 20px;
   text-decoration: none;
   font-weight: bold;
@@ -128,7 +128,7 @@ a {
 
 .navbar ul li .dropdown a {
   display: block; /* Full width clickable links */
-  color: white;
+  color: #C1E1E3;
   font-size: 16px;
   font-weight: normal;
   padding: 5px 10px;
@@ -539,7 +539,7 @@ header {
 .big-text {
   font-size: 2.0rem;
   font-weight: bold;
-  color: #333;
+  color: #006297;
   display: inline-block;
   position: relative;
 }
@@ -549,7 +549,7 @@ header {
   position: absolute;
   width: 0%;
   height: 13px;
-  background-color: #007BFF;
+  background-color: #006297;
   bottom: -10px;
   left: 0;
   transition: width 1.0s ease-in-out;
