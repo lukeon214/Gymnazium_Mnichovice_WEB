@@ -9,12 +9,12 @@
 logo-font {
   font-family: 'Juneville', Arial, sans-serif;
   font-size: 2rem;
-  color: #333;
+  color: #C1E1E3;
   display: flex;
   max-width: 100px;
   line-height: 1;
   margin-block-start: 0em;
-  margin-block-end: 0.5em;
+  margin-block-end: 0.8em;
   margin-inline-start: 0.5em;
   margin-inline-end: 0.5em;
 }
@@ -152,7 +152,7 @@ a {
   bottom: 0;
   height: 2px;
   width: 0;
-  background: #FFD700;
+  background: white;
   transition: width 0.3s ease, left 0.3s ease;
 }
 
@@ -167,7 +167,7 @@ a {
 }
 
 .navbar ul li a:hover {
-  color: #FFD700;
+  color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -192,6 +192,22 @@ a {
   }
 }
 
+.svg-divider {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 0;
+}
+
+.svg-divider svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.svg-divider path {
+  fill: #f4f4f9; /* Change this to match your next section's background */
+}
 /* Hero Section */
 .hero {
   position: relative;
@@ -438,10 +454,9 @@ a {
   border-color: transparent;
   font-size: 16px;
   background-color: inherit;
-  border-radius: 100px;
   font-weight: 600;
-  color: #003366;
-  box-shadow: 0 0 0 2px #003366;
+  color: #006297;
+  box-shadow: 0 0 0 2px #006297;
   cursor: pointer;
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
@@ -450,7 +465,7 @@ a {
 .animated-button svg {
   position: absolute;
   width: 24px;
-  fill: #003366;
+  fill: #006297;
   z-index: 9;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -470,7 +485,7 @@ a {
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
-  background-color: #003366;
+  background-color: #006297;
   border-radius: 50%;
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -507,7 +522,7 @@ a {
 
 .animated-button:active {
   scale: 0.95;
-  box-shadow: 0 0 0 4px #003366;
+  box-shadow: 0 0 0 4px #006297;
 }
 
 .animated-button:hover .circle {
