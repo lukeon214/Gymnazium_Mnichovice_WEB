@@ -1,24 +1,25 @@
 /* Font */
 @font-face {
-  font-family: 'Juneville';
-  src: url('fonts/juneville.ttf') format('truetype');
-  font-weight: normal;
+  font-family: "arponasans", sans-serif;
+  src: url('https://use.typekit.net/rca3xju.css');
+  font-weight: 200;
   font-style: normal;
 }
 
 logo-font {
-  font-family: 'Juneville', Arial, sans-serif;
+  font-family: 'arponasans', sans-serif;
   font-size: 2rem;
   color: #C1E1E3;
-  display: flex;
+  display: list-item;
+  list-style: none;
+  justify-content: left;
   max-width: 100px;
   line-height: 1;
   margin-block-start: 0em;
-  margin-block-end: 0.8em;
+  margin-block-end: 0.3em;
   margin-inline-start: 0.5em;
   margin-inline-end: 0.5em;
 }
-
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -69,7 +70,7 @@ a {
 }
 
 .logo img {
-  max-height: 120px;
+  max-height: 80px;
   width: auto;
 }
 
