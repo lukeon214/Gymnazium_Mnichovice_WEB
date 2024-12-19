@@ -583,17 +583,17 @@ header {
 /* Image cards */
 #new-cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 40px; /* Space between cards */
-  padding: 20px;
-  max-width: 1400px; /* Optional: limit the width of the container */
-  margin: 0 auto; /* Center the container */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 13px;
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 #new-cards-container .custom-card {
   position: relative;
-  width: 450px;
-  height: 450px;
+  width: 250px;
+  height: 250px;
   background-color: #f2f2f2;
   border-radius: 10px;
   display: flex;
