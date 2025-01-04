@@ -1,7 +1,7 @@
 /* Font */
 @font-face {
-  font-family: "arponasans", sans-serif;
-  src: url('https://use.typekit.net/rca3xju.css');
+  font-family: 'arponasans';
+  src: url('arponasans.woff2') format('woff2');
   font-weight: 200;
   font-style: normal;
 }
@@ -225,7 +225,7 @@ a {
 }
 
 .svg-divider path {
-  fill: #f4f4f9; /* Change this to match your next section's background */
+  fill: #f4f4f9;
 }
 /* Hero Section */
 .hero {
@@ -273,8 +273,6 @@ a {
 .hero-overlay p {
   font-size: 1.5rem;
 }
-/* Main button */
-
 
 /* Card */
 .card {
@@ -671,4 +669,233 @@ header {
   font-size: 14px;
   color: #000000;
   line-height: 1.4;
+}
+
+.burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #C1E1E3;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
+}
+
+@media (max-width: 1530px) {
+  .navbar {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+/* Burger Styling */
+.burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: none;
+  z-index: 1001;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #C1E1E3;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
+}
+
+/* Full-Screen Section */
+.fullscreen-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 98, 151, 0.95);
+  color: white;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+#burger:checked ~ .fullscreen-section {
+  display: flex;
+  opacity: 1;
+}
+
+@media (max-width: 1530px) {
+  .navbar {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+.fullscreen-navbar {
+  margin-bottom: 20px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.fullscreen-navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.fullscreen-navbar li {
+  position: relative;
+}
+
+.fullscreen-navbar a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.fullscreen-navbar a:hover {
+  color: #FFD700;
+}
+
+.fullscreen-navbar .dropdown {
+  display: none;
+  top: 100%;
+  left: 0;
+  background-color: #003366;
+  list-style: none;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1001;
+}
+
+.fullscreen-navbar .dropdown li {
+  margin: 5px 0;
+}
+
+.fullscreen-navbar .dropdown a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  display: block;
+  text-align: left;
+}
+
+.fullscreen-navbar li:hover .dropdown {
+  display: block;
 }
