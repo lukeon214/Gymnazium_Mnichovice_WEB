@@ -5,7 +5,7 @@ document.addEventListener("scroll", () => {
         const rect = bigText.getBoundingClientRect();
         const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
 
-        if (isVisible) {
+        if (isVisible && window.innerWidth > 1530) {
             bigText.classList.add("visible");
         } else {
             bigText.classList.remove("visible");
