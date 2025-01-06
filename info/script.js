@@ -58,19 +58,3 @@ class LogoFont extends HTMLElement {
 }
 
 customElements.define('logo-font', LogoFont);
-
-class NormalText extends HTMLElement {
-    connectedCallback() {
-        this.style.fontFamily = "'ArponaRegularita', sans-serif";
-    }
-}
-
-customElements.define('normal-text', NormalText);
-
-class MidText extends HTMLElement {
-    connectedCallback() {
-        this.style.fontFamily = "'ArponaRegularita', sans-serif";
-    }
-}
-
-customElements.define('mid-text', MidText);

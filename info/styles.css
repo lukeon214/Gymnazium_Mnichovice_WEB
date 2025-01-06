@@ -27,7 +27,7 @@ logo-font {
   font-family: 'ArponaMedium', sans-serif;
 }
 logo-font {
-  font-family: 'ArponaMedium', sans-serif;
+  font-family: 'arponasans', sans-serif;
   font-size: 2rem;
   color: white;
   display: list-item;
@@ -41,12 +41,8 @@ logo-font {
   margin-inline-end: 0.5em;
 }
 
-normal-text {
-  font-family: 'ArponaRegularita', sans-serif;
-}
-
 body {
-  font-family: 'ArponaRegularita', sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
@@ -476,46 +472,20 @@ a {
 }
 
 .normal-text {
-  font-size: 1.6rem;
-  line-height: 1.4;
-  color: #000000;
-  font-family: 'ArponaRegularita', sans-serif;
-  max-width: 600px;
-  margin: 0px 15%;
-  text-align: justify;
-  font-weight: 300;
-  margin-top: 5px;
-}
-
-.normal-text-weight {
-  font-size: 1.6rem;
-  line-height: 1.4;
-  color: #000000;
-  font-family: 'ArponaRegularita', sans-serif;
-  max-width: 600px;
-  margin: 0px 15%;
-  text-align: justify;
-  font-weight: 700;
-  margin-top: 15px;
-}
-
-.normal-text-no-font {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.4;
   color: #000000;
   font-family: 'Arial', sans-serif;
   max-width: 600px;
   margin: 0px 15%;
   text-align: justify;
-  font-weight: 300;
-  margin-top: 5px;
 }
 
 .mid-text {
   font-size: 1.5rem;
   line-height: 1.4;
   color: #333;
-  font-family: 'ArponaSemibold', sans-serif;
+  font-family: 'Arial', sans-serif;
   max-width: 600px;
   margin: 10px 15%;
   text-align: justify;
@@ -523,40 +493,15 @@ a {
 }
 
 .bigger-text {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   line-height: 1.4;
   color: #333;
-  font-family: 'ArponaSemibold', sans-serif;
+  font-family: 'Arial', sans-serif;
   max-width: 600px;
   margin: 10px auto;
   text-align: center;
   font-weight: 750;
-  margin-top: 55px;
-  margin-bottom: 25px;
-}
-
-.bigger-text-no-top {
-  font-size: 1.7rem;
-  line-height: 1.4;
-  color: #333;
-  font-family: 'ArponaSemibold', sans-serif;
-  max-width: 600px;
-  margin: 10px auto;
-  text-align: center;
-  font-weight: 750;
-  margin-top: 15px;
-  margin-bottom: 25px;
-}
-
-.bigger-text-middle {
-  font-size: 1.9rem;
-  line-height: 1.4;
-  color: #333;
-  font-family: 'ArponaSemibold', sans-serif;
-  margin: 10px auto;
-  text-align: center;
-  font-weight: 750;
-  margin-top: 55px;
+  margin-top: 25px;
   margin-bottom: 25px;
 }
 
@@ -578,11 +523,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20%;
+  margin-top: 5%;
 }
 
 .image-container img {
-  max-width: 550px;
+  max-width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -898,7 +843,7 @@ header {
   position: absolute;
   height: 4px;
   width: 100%;
-  background: white;
+  background: #C1E1E3;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -968,14 +913,6 @@ header {
     display: none;
   }
 
-  .text-container {
-    display: none;
-}
-
-  .card-section {
-    flex-wrap: wrap;
-  }
-
   .text-card-content {
     font-size: 1.2rem;
     line-height: 1.6;
@@ -987,17 +924,13 @@ header {
   }
 
   .image-container {
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
-  }
-
-  .image-container img {
-    max-width: 400px;
+    display: none;
   }
 
   logo-font {
     font-family: 'arponasans', sans-serif;
     font-size: 2rem;
+    color: #C1E1E3;
     display: list-item;
     list-style: none;
     justify-content: center;
@@ -1007,7 +940,7 @@ header {
     margin-block-end: 0.3em;
     margin-inline-start: 0.5em;
     margin-inline-end: 0.5em;
-    transform: translate(-57%, 0%);
+    transform: translate(-40%, 0%);
 }
 
   .burger {
