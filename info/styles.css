@@ -843,7 +843,7 @@ header {
   position: absolute;
   height: 4px;
   width: 100%;
-  background: #C1E1E3;
+  background: white;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -927,10 +927,14 @@ header {
     display: none;
   }
 
+  .card-section {
+    flex-wrap: wrap;
+  }
+
   logo-font {
     font-family: 'arponasans', sans-serif;
     font-size: 2rem;
-    color: #C1E1E3;
+    color: white;
     display: list-item;
     list-style: none;
     justify-content: center;
