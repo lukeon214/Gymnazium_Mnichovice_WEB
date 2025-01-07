@@ -484,7 +484,7 @@ a {
   margin: 0px 15%;
   text-align: justify;
   font-weight: 300;
-  margin-top: 5px;
+  margin-top: 25px;
 }
 
 .normal-text-weight {
@@ -530,9 +530,9 @@ a {
   max-width: 600px;
   margin: 10px auto;
   text-align: center;
-  font-weight: 750;
-  margin-top: 55px;
-  margin-bottom: 25px;
+  font-weight: 800;
+  margin-top: 65px;
+  margin-bottom: 30px;
 }
 
 .bigger-text-no-top {
@@ -578,7 +578,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20%;
+  margin-top: 5%;
 }
 
 .image-container img {
