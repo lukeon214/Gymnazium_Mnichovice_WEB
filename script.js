@@ -56,7 +56,6 @@ class LogoFont extends HTMLElement {
         this.style.fontFamily = "'ArponaMedium', sans-serif";
     }
 }
-
 customElements.define('logo-font', LogoFont);
 
 class NormalText extends HTMLElement {
@@ -64,7 +63,6 @@ class NormalText extends HTMLElement {
         this.style.fontFamily = "'ArponaRegularita', sans-serif";
     }
 }
-
 customElements.define('normal-text', NormalText);
 
 class MidText extends HTMLElement {
@@ -72,5 +70,4 @@ class MidText extends HTMLElement {
         this.style.fontFamily = "'ArponaRegularita', sans-serif";
     }
 }
-
 customElements.define('mid-text', MidText);
