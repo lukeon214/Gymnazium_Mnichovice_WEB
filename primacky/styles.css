@@ -968,10 +968,6 @@ header {
     display: none;
   }
 
-  .text-container {
-    display: none;
-}
-
   .card-section {
     flex-wrap: wrap;
   }
@@ -992,7 +988,7 @@ header {
   }
 
   .image-container img {
-    max-width: 400px;
+    max-width: 380px;
   }
 
   logo-font {

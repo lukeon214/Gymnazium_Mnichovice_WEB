@@ -836,16 +836,6 @@ header {
   left: 5px;
 }
 
-@media (max-width: 1530px) {
-  .navbar {
-    display: none;
-  }
-
-  .burger {
-    display: block;
-  }
-}
-
 /* Burger Styling */
 .burger {
   position: relative;
@@ -931,9 +921,25 @@ header {
   opacity: 1;
 }
 
-@media (max-width: 1530px) {
+@media (max-width: 1380px) {
   .navbar {
     display: none;
+  }
+
+  .bigger-text {
+    font-size: 1.1rem;
+  }
+
+  .mid-text {
+    font-size: 0.9rem;
+  }
+
+  .normal-text {
+    font-size: 0.9rem;
+  }
+
+  .bigger-text-clickable {
+    font-size: 0.9rem;
   }
 
   .text-card-content {
@@ -947,7 +953,9 @@ header {
   }
 
   .image-container {
-    display: none;
+    max-width: 370px;
+    margin-top: 25%;
+    margin-left: 4%;
   }
 
   .card-section {
