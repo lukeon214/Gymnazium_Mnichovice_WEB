@@ -578,11 +578,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20%;
+  margin-top: 3%;
 }
 
 .image-container img {
-  max-width: 550px;
+  max-width: 250px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -979,7 +979,7 @@ header {
   }
 
   .image-container img {
-    max-width: 400px;
+    max-width: 150px;
   }
 
   logo-font {
@@ -1126,7 +1126,7 @@ header {
   color: #2c2c6c;
   margin-bottom: 1.5rem;
   line-height: 1.4;
-  margin-top: 2%;
+  margin-right: 5%;
 }
 
 .event-location {
@@ -1146,6 +1146,7 @@ header {
   padding: 1rem;
   border-top: 2px solid #006297;
   border-bottom: 2px solid #006297;
+  margin-top: 2%;
 }
 
 /* Image Gallery */
