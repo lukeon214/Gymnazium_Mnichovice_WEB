@@ -512,14 +512,25 @@ a {
 }
 
 .mid-text {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.4;
   color: #333;
   font-family: 'ArponaSemibold', sans-serif;
-  max-width: 600px;
-  margin: 10px 15%;
+  max-width: 1450px;
+  margin: 10px 15%;;
   text-align: justify;
   font-weight: 700;
+}
+
+.mid-text-bigger {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #333;
+  font-family: 'ArponaSemibold', sans-serif;
+  max-width: 1450px;
+  margin: 10px 15%;;
+  text-align: justify;
+  font-weight: 800;
 }
 
 .bigger-text {
@@ -599,6 +610,7 @@ a {
 
 /* Animated Button */
 .animated-button {
+  margin-top: 2%;
   position: relative;
   display: inline-grid;
   align-items: center;
@@ -964,6 +976,14 @@ header {
 }
 
 @media (max-width: 1530px) {
+  .mid-text {
+    font-size: 0.8rem;
+  }
+
+  .mid-text-bigger {
+    font-size: 0.9rem;
+  }
+
   .navbar {
     display: none;
   }
@@ -1121,3 +1141,112 @@ header {
 .card-three {
   border-top: 4px solid #006297;
 }
+
+.download-btn {
+  --width: 220px;
+  --height: 50px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #006297;
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: 'ArponaRegularita', sans-serif;
+  transition: background 0.3s;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.download-btn::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
+  font-size: 0.9rem;
+  color: #111;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.download-btn::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.download-btn::after,
+.download-btn::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.download-btn-wrapper,
+.btn-text,
+.btn-icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.btn-text {
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: top 0.5s;
+}
+
+.btn-icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: top 0.5s;
+}
+
+.download-btn:hover {
+  background: #003366;
+}
+
+.download-btn:hover .btn-text {
+  top: -100%;
+}
+
+.download-btn:hover .btn-icon {
+  top: 0;
+}
+
+.download-btn:hover:before,
+.download-btn:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.download-btn:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.download-btn:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
