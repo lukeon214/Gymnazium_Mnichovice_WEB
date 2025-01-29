@@ -959,10 +959,6 @@ header {
     display: none;
   }
 
-  .text-container {
-    display: none;
-  }
-
   .card-section {
     flex-wrap: wrap;
   }
@@ -1121,4 +1117,82 @@ header {
 
 .card-three {
   border-top: 4px solid #006297;
+}
+
+.event-date {
+  font-family: 'ArponaSemibold', sans-serif;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #2c2c6c;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  margin-top: 2%;
+}
+
+.event-location {
+  font-family: 'ArponaRegularita', sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.highlight-message {
+  font-family: 'ArponaSemibold', sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #006297;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  border-top: 2px solid #006297;
+  border-bottom: 2px solid #006297;
+}
+
+/* Image Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s cubic-bezier(0.3, 0.18, 0, 0.98);
+}
+
+@media (max-width: 1380px) {
+  .gallery-image {
+      width: 90%;
+  }
+}
+
+.gallery-image:hover {
+  transform: scale(1.03);
+}
+
+.more-photos-btn {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .gallery-grid {
+      grid-template-columns: 1fr;
+  }
+  
+  .event-date {
+      font-size: 1.2rem;
+  }
+  
+  .highlight-message {
+      font-size: 1.4rem;
+  }
 }
