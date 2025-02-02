@@ -921,7 +921,7 @@ header {
   opacity: 1;
 }
 
-@media (max-width: 1380px) {
+@media (max-width: 1440px) {
   .navbar {
     display: none;
   }

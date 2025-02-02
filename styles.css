@@ -864,16 +864,6 @@ header {
   left: 5px;
 }
 
-@media (max-width: 1530px) {
-  .navbar {
-    display: none;
-  }
-
-  .burger {
-    display: block;
-  }
-}
-
 /* Burger Styling */
 .burger {
   position: relative;
@@ -959,7 +949,7 @@ header {
   opacity: 1;
 }
 
-@media (max-width: 1530px) {
+@media (max-width: 1440px) {
   .mid-text {
     font-size: 0.8rem;
   }

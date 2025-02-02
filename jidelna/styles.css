@@ -587,7 +587,6 @@ a {
 .image-container {
   flex: 1;
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-top: 5%;
 }
@@ -879,17 +878,6 @@ header {
   top: 28px;
   left: 5px;
 }
-
-@media (max-width: 1530px) {
-  .navbar {
-    display: none;
-  }
-
-  .burger {
-    display: block;
-  }
-}
-
 /* Burger Styling */
 .burger {
   position: relative;
@@ -975,7 +963,7 @@ header {
   opacity: 1;
 }
 
-@media (max-width: 1530px) {
+@media (max-width: 1440px) {
   .mid-text {
     font-size: 0.8rem;
   }
@@ -1252,14 +1240,12 @@ header {
 
 .content-wrapper {
   display: flex;
-  gap: 40px;
-  align-items: center;
   margin-bottom: 2rem;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10%;
 }
 
-.text-content {
-  flex: 1;
-}
 
 .image-container {
   flex: 1;

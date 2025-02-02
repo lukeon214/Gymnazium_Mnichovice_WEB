@@ -21,3 +21,32 @@
     margin-inline-start: 0.5em;
     margin-inline-end: 0.5em;
 }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+       url('../fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3, a {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed SemiBold';
+  src: url('../fonts/Roboto_Condensed-SemiBold.woff2') format('woff2'),
+       url('../fonts/Roboto_Condensed-SemiBold.ttf') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.big-text,
+.bigger-text,
+.mid-text,
+.normal-text,
+.bigger-text-clickable {
+  font-family: 'Roboto Condensed SemiBold', sans-serif;
+}

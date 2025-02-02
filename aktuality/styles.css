@@ -953,7 +953,7 @@ header {
   opacity: 1;
 }
 
-@media (max-width: 1380px) {
+@media (max-width: 1440px) {
 
   .navbar {
     display: none;
@@ -1120,10 +1120,9 @@ header {
 }
 
 .event-date {
-  font-family: 'ArponaSemibold', sans-serif;
-  font-size: 1.4rem;
+  font-family: 'Roboto Condensed SemiBold', sans-serif;
+  font-size: 1.8rem;
   text-align: center;
-  color: #2c2c6c;
   margin-bottom: 1.5rem;
   line-height: 1.4;
   margin-right: 5%;
