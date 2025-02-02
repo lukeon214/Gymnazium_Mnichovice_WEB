@@ -1,33 +1,16 @@
 /* Font */
 @font-face {
-  font-family: 'ArponaRegularita';
-  src: url('fonts/Fontspring-DEMO-arpona-regularita.woff2') format('woff2'),
-       url('fonts/Fontspring-DEMO-arpona-regularita.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ArponaSemibold';
-  src: url('fonts/Fontspring-DEMO-arpona-semibold.woff2') format('woff2'),
-       url('fonts/Fontspring-DEMO-arpona-semibold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ArponaMedium';
-  src: url('fonts/Fontspring-DEMO-arpona-medium.woff2') format('woff2'),
-       url('fonts/Fontspring-DEMO-arpona-medium.woff') format('woff');
+  font-family: 'ProtestStrike';
+  src: url('fonts/ProtestStrike-Regular.ttf') format('ttf');
   font-weight: 500;
   font-style: normal;
 }
 
 logo-font {
-  font-family: 'ArponaMedium', sans-serif;
+  font-family: 'ProtestStrike', sans-serif;
 }
 logo-font {
-  font-family: 'arponasans', sans-serif;
+  font-family: 'ProtestStrike', sans-serif;
   font-size: 2rem;
   color: white;
   display: list-item;
@@ -1012,7 +995,7 @@ header {
   }
 
   logo-font {
-    font-family: 'arponasans', sans-serif;
+    font-family: 'ProtestStrike', sans-serif;
     font-size: 2rem;
     display: list-item;
     list-style: none;
