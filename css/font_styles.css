@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Rowdies-Bold';
+    src: url('../fonts/Rowdies-Bold.woff') format('woff'),
+         url('../fonts/Rowdies-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  logo-font {
+    font-family: 'Rowdies-Bold', sans-serif !important;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: white;
+    display: list-item;
+    list-style: none;
+    justify-content: center;
+    max-width: 100px;
+    line-height: 1;
+    margin-block-start: 0em;
+    margin-block-end: 0.3em;
+    margin-inline-start: 0.5em;
+    margin-inline-end: 0.5em;
+}

@@ -1,17 +1,18 @@
 /* Font */
 @font-face {
-  font-family: 'ProtestStrike';
-  src: url('fonts/ProtestStrike-Regular.ttf') format('ttf');
-  font-weight: 500;
+  font-family: 'Rowdies-Bold';
+  src: url('fonts/Rowdies-Bold.woff') format('woff'),
+       url('fonts/Rowdies-Bold.ttf') format('truetype');
+  font-weight: bold;
   font-style: normal;
 }
-
 logo-font {
-  font-family: 'ProtestStrike', sans-serif;
+  font-family: 'Rowdies-Bold', sans-serif;
 }
 logo-font {
-  font-family: 'ProtestStrike', sans-serif;
+  font-family: 'Rowdies-Bold', sans-serif !important;
   font-size: 2rem;
+  letter-spacing: 1px;
   color: white;
   display: list-item;
   list-style: none;
@@ -995,7 +996,7 @@ header {
   }
 
   logo-font {
-    font-family: 'ProtestStrike', sans-serif;
+    font-family: 'Rowdies-Bold', sans-serif;
     font-size: 2rem;
     display: list-item;
     list-style: none;
