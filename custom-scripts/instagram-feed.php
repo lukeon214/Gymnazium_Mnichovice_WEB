@@ -11,7 +11,12 @@ if (file_exists($cache_file) && (time() - filemtime($cache_file)) < $cache_time)
 }
 
 $insta_url = "https://www.instagram.com/$instagram_username/";
-$html = file_get_contents($insta_url);
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $insta_url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+$html = curl_exec($ch);
+curl_close($ch);
 
 if (!$html) {
     echo json_encode(["error" => "Could not fetch Instagram page."]);
@@ -42,6 +47,11 @@ foreach ($media as $node) {
     ];
 
     if (count($posts) >= 6) break;
+}
+
+if (empty($posts)) {
+    echo json_encode(["error" => "No posts found. Instagram may have changed its structure."]);
+    exit;
 }
 
 file_put_contents($cache_file, json_encode($posts));
