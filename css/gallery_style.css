@@ -80,4 +80,33 @@
     .lightbox-arrow {
         display: none;
     }
+    .lightbox-control {
+        font-size: 2rem;
+        padding: 15px;
+    }
+}
+
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    touch-action: none;
+}
+
+#lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.lightbox-control {
+    padding: 20px;
+    font-size: 2.5rem;
 }
