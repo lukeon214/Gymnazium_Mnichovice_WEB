@@ -66,7 +66,7 @@ h1, h2, h3, a {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 837px) {
   logo-font {
     font-family: 'Rowdies-Bold', sans-serif !important;
     font-size: 1.8rem;
