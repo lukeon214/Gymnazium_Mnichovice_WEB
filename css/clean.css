@@ -424,7 +424,7 @@ a {
     line-height: 1.8
 }
 
-.normal-text {
+.normal-text-list {
     font-size: 1.6rem;
     line-height: 1.4;
     color: #000;
@@ -1848,4 +1848,70 @@ logo-font {
 
 .insta-grid img:hover {
     transform: scale(1.05);
+}
+
+.text-image-wrapper-two {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Section */
+.text-container-two {
+    flex: 1;
+    min-width: 300px;
+}
+
+.text-container-two h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.text-container-two p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Image Section */
+.image-container-two {
+    flex: 1;
+    text-align: right;
+    min-width: 300px;
+}
+
+.image-container-two img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .text-image-wrapper-two {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-container-two {
+        max-width: 90%;
+    }
+
+    .image-container-two {
+        text-align: center;
+    }
+
+    .image-container-two img {
+        max-width: 350px;
+    }
 }

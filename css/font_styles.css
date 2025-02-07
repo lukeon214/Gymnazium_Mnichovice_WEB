@@ -47,6 +47,7 @@ h1, h2, h3, a {
 .bigger-text,
 .mid-text,
 .normal-text,
+.normal-text-list,
 .bigger-text-clickable {
   font-family: 'Roboto Condensed SemiBold', sans-serif;
 }
