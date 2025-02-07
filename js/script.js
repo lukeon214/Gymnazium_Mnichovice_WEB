@@ -50,27 +50,3 @@ document.querySelectorAll('.fullscreen-navbar li > a').forEach(link => {
         }
     });
 });
-
-class LogoFont extends HTMLElement {
-    connectedCallback() {
-        this.style.fontFamily = "'ArponaMedium', sans-serif";
-    }
-}
-
-customElements.define('logo-font', LogoFont);
-
-class NormalText extends HTMLElement {
-    connectedCallback() {
-        this.style.fontFamily = "'ArponaRegularita', sans-serif";
-    }
-}
-
-customElements.define('normal-text', NormalText);
-
-class MidText extends HTMLElement {
-    connectedCallback() {
-        this.style.fontFamily = "'ArponaRegularita', sans-serif";
-    }
-}
-
-customElements.define('mid-text', MidText);
