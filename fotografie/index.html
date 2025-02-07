@@ -98,91 +98,97 @@
         </nav>
     </header>
     <section class="highlight-section">
-        <h1 class="big-text">Fotografie</h1>
+        <h1 class="big-text">Jídelna</h1>
         <div class="gallery-container">
             <div class="gallery-grid">
-                <!-- Add your 6 images (replace placeholder URLs) -->
                 <div class="gallery-item">
-                    <img src="image1.jpg" alt="Gallery Image 1">
-                    <div class="image-overlay">
-                        <p class="image-caption">Caption 1</p>
-                    </div>
+                    <img src="../fotos/jidelna/1.jpg" alt="jidelna">
+                    <div class="image-overlay"><p></p></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="image2.jpg" alt="Gallery Image 2">
-                    <div class="image-overlay">
-                        <p class="image-caption">Caption 2</p>
-                    </div>
+                    <img src="../fotos/jidelna/2.jpg" alt="jidelna">
+                    <div class="image-overlay"><p></p></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="image3.jpg" alt="Gallery Image 3">
-                    <div class="image-overlay">
-                        <p class="image-caption">Caption 3</p>
-                    </div>
+                    <img src="../fotos/jidelna/3.jpg" alt="jidelna">
+                    <div class="image-overlay"><p></p></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="image4.jpg" alt="Gallery Image 4">
-                    <div class="image-overlay">
-                        <p class="image-caption">Caption 4</p>
-                    </div>
+                    <img src="../fotos/jidelna/4.jpg" alt="jidelna">
+                    <div class="image-overlay"><p></p></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="image5.jpg" alt="Gallery Image 5">
-                    <div class="image-overlay">
-                        <p class="image-caption">Caption 5</p>
-                    </div>
+                    <img src="../fotos/jidelna/5.jpg" alt="jidelna">
+                    <div class="image-overlay"><p></p></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="image6.jpg" alt="Gallery Image 6">
-                    <div class="image-overlay">
-                        <p class="image-caption">Caption 6</p>
-                    </div>
+                    <img src="../fotos/jidelna/6.jpg" alt="jidelna">
+                    <div class="image-overlay"><p></p></div>
                 </div>
-                <div class="gallery-item">
-                    <img src="image7.jpg" alt="Gallery Image 6">
-                    <div class="image-overlay">
-                        <p class="image-caption">Caption 6</p>
-                    </div>
+                <div class="gallery-item hidden">
+                    <img src="../fotos/jidelna/7.jpg" alt="jidelna">
+                    <div class="image-overlay"><p></p></div>
                 </div>
-                <div class="gallery-item">
-                    <img src="image8.jpg" alt="Gallery Image 6">
-                    <div class="image-overlay">
-                        <p class="image-caption">Caption 6</p>
-                    </div>
+                <div class="gallery-item hidden">
+                    <img src="../fotos/jidelna/8.jpg" alt="jidelna">
+                    <div class="image-overlay"><p></p></div>
                 </div>
-                <div class="gallery-item">
-                    <img src="image9.jpg" alt="Gallery Image 6">
-                    <div class="image-overlay">
-                        <p class="image-caption">Caption 6</p>
-                    </div>
+                <div class="gallery-item hidden">
+                    <img src="../fotos/jidelna/9.jpg" alt="jidelna">
+                    <div class="image-overlay"><p></p></div>
                 </div>
-                <div class="gallery-item">
-                    <img src="image10.jpg" alt="Gallery Image 6">
-                    <div class="image-overlay">
-                        <p class="image-caption">Caption 6</p>
-                    </div>
+                <div class="gallery-item hidden">
+                    <img src="../fotos/jidelna/10.jpg" alt="jidelna">
+                    <div class="image-overlay"><p></p></div>
                 </div>
+                <div class="gallery-item hidden">
+                    <img src="../fotos/jidelna/11.jpg" alt="jidelna">
+                    <div class="image-overlay"><p></p></div>
+                </div>
+                <div class="gallery-item hidden">
+                    <img src="../fotos/jidelna/12.jpg" alt="jidelna">
+                    <div class="image-overlay"><p></p></div>
+                </div>
+                <div class="gallery-item hidden">
+                    <img src="../fotos/jidelna/13.jpg" alt="jidelna">
+                    <div class="image-overlay"><p></p></div>
+                </div>
+                <div class="gallery-item hidden">
+                    <img src="../fotos/jidelna/14.jpg" alt="jidelna">
+                    <div class="image-overlay"><p></p></div>
+                </div>
+                <div class="gallery-item hidden">
+                    <img src="../fotos/jidelna/15.jpg" alt="jidelna">
+                    <div class="image-overlay"><p></p></div>
+                </div>
+                
             </div>
             <div class="button-container">
-                <button class="expand-button" onclick="toggleGallery()">Rozbalit galerii</button>
+                <button class="expand-button" onclick="loadMore()">Zobrazit více</button>
             </div>
         </div>
     </section>
 
     <script>
-        function toggleGallery() {
-            const gallery = document.querySelector('.gallery-grid');
-            const button = document.querySelector('.expand-button');
+        let itemsToShow = 6;
+        const itemsPerLoad = 3;
+        
+        function loadMore() {
+            const allItems = Array.from(document.querySelectorAll('.gallery-item'));
+            const totalItems = allItems.length;
             
-            gallery.classList.toggle('expanded');
-            
-            if (gallery.classList.contains('expanded')) {
-                button.textContent = 'Zabalit galerii';
-            } else {
-                button.textContent = 'Rozbalit galerii';
+            const nextVisible = itemsToShow + itemsPerLoad;
+            allItems.slice(itemsToShow, nextVisible).forEach(item => {
+                item.classList.remove('hidden');
+            });
+        
+            itemsToShow = nextVisible;
+        
+            if (itemsToShow >= totalItems) {
+                document.querySelector('.expand-button').classList.add('hidden');
             }
         }
-    </script>
+        </script>
 </body>
 </html>
     <section class="school-info">

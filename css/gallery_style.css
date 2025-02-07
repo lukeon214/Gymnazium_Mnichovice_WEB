@@ -17,6 +17,14 @@
     transition: transform 0.3s ease;
 }
 
+.gallery-item.hidden {
+    display: none;
+}
+
+.expand-button.hidden {
+    display: none;
+}
+
 .gallery-item:hover {
     transform: scale(1.03);
 }
@@ -57,30 +65,61 @@
 }
 
 .expand-button {
-    padding: 12px 24px;
-    font-size: 1.1rem;
-    background-color: #2c3e50;
-    color: white;
-    border: none;
-    border-radius: 25px;
+    --color: #006297;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    overflow: hidden;
     cursor: pointer;
-    transition: all 0.3s ease;
+    margin: 20px;
+    font-size: 17px;
+    z-index: 1;
+    color: var(--color);
+    border: 2px solid var(--color);
+    border-radius: 6px;
+    position: relative;
+  }
+  
+.expand-button::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 250px;
+    height: 250px;
+    z-index: -1;
+    border-radius: 50%;
 }
 
 .expand-button:hover {
-    background-color: #34495e;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: white;
 }
+
+.expand-button:before {
+    top: 100%;
+    left: 100%;
+    transition: 0.3s all;
+}
+
+.expand-button:hover::before {
+    top: -30px;
+    left: -50px;
+}
+  
 
 @media (max-width: 768px) {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-}
 
-@media (max-width: 480px) {
     .gallery-grid {
         grid-template-columns: 1fr;
+    }
+
+    .expand-button {
+        width: 7em;
+        font-size: 15px;
+        margin: 15px;
     }
 }
