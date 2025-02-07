@@ -101,63 +101,63 @@
         <h1 class="big-text">Jídelna</h1>
         <div class="gallery-container">
             <div class="gallery-grid">
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
                     <img src="../fotos/jidelna/1.jpg" alt="jidelna">
                     <div class="image-overlay"><p></p></div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
                     <img src="../fotos/jidelna/2.jpg" alt="jidelna">
                     <div class="image-overlay"><p></p></div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
                     <img src="../fotos/jidelna/3.jpg" alt="jidelna">
                     <div class="image-overlay"><p></p></div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
                     <img src="../fotos/jidelna/4.jpg" alt="jidelna">
                     <div class="image-overlay"><p></p></div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
                     <img src="../fotos/jidelna/5.jpg" alt="jidelna">
                     <div class="image-overlay"><p></p></div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
                     <img src="../fotos/jidelna/6.jpg" alt="jidelna">
                     <div class="image-overlay"><p></p></div>
                 </div>
-                <div class="gallery-item hidden">
+                <div class="gallery-item hidden" onclick="openLightbox(this.querySelector('img'))">
                     <img src="../fotos/jidelna/7.jpg" alt="jidelna">
                     <div class="image-overlay"><p></p></div>
                 </div>
-                <div class="gallery-item hidden">
+                <div class="gallery-item hidden" onclick="openLightbox(this.querySelector('img'))">
                     <img src="../fotos/jidelna/8.jpg" alt="jidelna">
                     <div class="image-overlay"><p></p></div>
                 </div>
-                <div class="gallery-item hidden">
+                <div class="gallery-item hidden" onclick="openLightbox(this.querySelector('img'))">
                     <img src="../fotos/jidelna/9.jpg" alt="jidelna">
                     <div class="image-overlay"><p></p></div>
                 </div>
-                <div class="gallery-item hidden">
+                <div class="gallery-item hidden" onclick="openLightbox(this.querySelector('img'))">
                     <img src="../fotos/jidelna/10.jpg" alt="jidelna">
                     <div class="image-overlay"><p></p></div>
                 </div>
-                <div class="gallery-item hidden">
+                <div class="gallery-item hidden" onclick="openLightbox(this.querySelector('img'))">
                     <img src="../fotos/jidelna/11.jpg" alt="jidelna">
                     <div class="image-overlay"><p></p></div>
                 </div>
-                <div class="gallery-item hidden">
+                <div class="gallery-item hidden" onclick="openLightbox(this.querySelector('img'))">
                     <img src="../fotos/jidelna/12.jpg" alt="jidelna">
                     <div class="image-overlay"><p></p></div>
                 </div>
-                <div class="gallery-item hidden">
+                <div class="gallery-item hidden" onclick="openLightbox(this.querySelector('img'))">
                     <img src="../fotos/jidelna/13.jpg" alt="jidelna">
                     <div class="image-overlay"><p></p></div>
                 </div>
-                <div class="gallery-item hidden">
+                <div class="gallery-item hidden" onclick="openLightbox(this.querySelector('img'))">
                     <img src="../fotos/jidelna/14.jpg" alt="jidelna">
                     <div class="image-overlay"><p></p></div>
                 </div>
-                <div class="gallery-item hidden">
+                <div class="gallery-item hidden" onclick="openLightbox(this.querySelector('img'))">
                     <img src="../fotos/jidelna/15.jpg" alt="jidelna">
                     <div class="image-overlay"><p></p></div>
                 </div>
@@ -189,25 +189,31 @@
             }
         }
 
-        function openLightbox(imageSrc) {
-            const lightbox = document.querySelector('.lightbox-modal');
-            const lightboxImg = document.getElementById('lightbox-img');
-            lightboxImg.src = imageSrc;
-            lightbox.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
+        function openLightbox(imgElement) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
         
+        lightbox.style.display = "block";
+        lightboxImg.src = imgElement.src;
+        lightboxImg.alt = imgElement.alt;
+        
+        document.body.style.overflow = 'hidden';
+        }
+
         function closeLightbox() {
-            document.querySelector('.lightbox-modal').style.display = 'none';
+            document.getElementById('lightbox').style.display = "none";
             document.body.style.overflow = 'auto';
         }
-        
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeLightbox();
-        });
+
+        document.getElementById('lightbox').onclick = function(e) {
+            if (e.target !== document.getElementById('lightbox-img')) {
+                closeLightbox();
+            }
+        }
     </script>
-    <div class="lightbox-modal" onclick="closeLightbox()">
-        <img class="lightbox-image" id="lightbox-img" alt="Enlarged view">
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" class="lightbox-content">
     </div>
 </body>
 </html>
