@@ -862,8 +862,15 @@ rger {
 }
 
 @media (max-width: 1440px) {
-    .navbar {
-        display: none;
+    .navbar ul li a {
+        font-size: 1.2rem;
+    }
+    .navbar ul {
+        gap: 5px;
+    }
+
+    .logo img {
+        max-height: 70px;
     }
 
     .card-section {
@@ -908,10 +915,6 @@ rger {
         color: white;
     }
 
-    .burger {
-        display: block;
-    }
-
     .hero-container {
         position: relative;
         width: 100%;
@@ -934,6 +937,33 @@ rger {
     .bigger-text-clickable {
         font-size: 0.9rem;
     }
+}
+
+@media (max-width: 1160px) {
+    .navbar ul li a {
+        font-size: 0.7rem;
+    }
+    .navbar ul {
+        gap: 5px;
+    }
+
+    .logo img {
+        max-height: 50px;
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+
+    .logo img {
+        max-height: 70px;
+    }
+
 }
 
 .fullscreen-navbar {
