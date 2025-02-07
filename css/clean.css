@@ -863,30 +863,33 @@ rger {
 
 @media (max-width: 1440px) {
     .navbar {
-        display: none
+        display: none;
     }
 
     .card-section {
-        flex-wrap: wrap
+        flex-wrap: wrap;
     }
 
     .text-card-content {
         font-size: 1.2rem;
         line-height: 1.6;
-        color: #333
+        color: #333;
     }
 
     .school-info {
-        display: none
+        display: none;
     }
 
     .image-container {
         flex-wrap: wrap;
-        flex-direction: column-reverse
+        flex-direction: column-reverse;
+        margin-top: 25%;
+        margin-left: 4%;
+        max-width: 370px;
     }
 
     .image-container img {
-        max-width: 150px
+        max-width: 380px;
     }
 
     logo-font {
@@ -901,17 +904,35 @@ rger {
         margin-block-end: 0.3em;
         margin-inline-start: 0.5em;
         margin-inline-end: 0.5em;
-        transform: translate(-57%, 0%)
+        transform: translate(-57%, 0%);
+        color: white;
     }
 
     .burger {
-        display: block
+        display: block;
     }
 
     .hero-container {
         position: relative;
         width: 100%;
-        height: 70%
+        height: 70%;
+    }
+
+    .mid-text {
+        font-size: 0.8rem;
+    }
+
+    .mid-text-bigger {
+        font-size: 0.9rem;
+    }
+
+    .bigger-text {
+        font-size: 1.1rem;
+    }
+
+    .normal-text,
+    .bigger-text-clickable {
+        font-size: 0.9rem;
     }
 }
 
@@ -1205,52 +1226,6 @@ logo-font {
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1)
 }
 
-@media (max-width: 1440px) {
-    .mid-text {
-        font-size: 0.9rem
-    }
-    .mid-text-bigger {
-        font-size: 1.2rem
-    }
-    .navbar {
-        display: none
-    }
-    .card-section {
-        flex-wrap: wrap
-    }
-    .text-card-content {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        color: #333
-    }
-    .school-info {
-        display: none
-    }
-    .image-container {
-        flex-wrap: wrap;
-        flex-direction: column-reverse
-    }
-    .image-container img {
-        max-width: 380px
-    }
-    logo-font {
-        font-family: "arponasans", sans-serif;
-        font-size: 2rem;
-        display: list-item;
-        list-style: none;
-        justify-content: center;
-        max-width: 100px;
-        line-height: 1;
-        margin-block-start: 0;
-        margin-block-end: 0.3em;
-        margin-inline-start: 0.5em;
-        margin-inline-end: 0.5em;
-        transform: translate(-57%, 0%)
-    }
-    .burger {
-        display: block
-    }
-}
 
 .gallery-container {
     max-width: 1200px;
@@ -1425,57 +1400,6 @@ body {
     margin-top: -23%
 }
 
-@media (max-width: 1440px) {
-    .navbar {
-        display: none
-    }
-    .bigger-text {
-        font-size: 1.1rem
-    }
-    .mid-text {
-        font-size: 0.9rem
-    }
-    .normal-text {
-        font-size: 0.9rem
-    }
-    .bigger-text-clickable {
-        font-size: 0.9rem
-    }
-    .text-card-content {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        color: #333
-    }
-    .school-info {
-        display: none
-    }
-    .image-container {
-        max-width: 370px;
-        margin-top: 25%;
-        margin-left: 4%
-    }
-    .card-section {
-        flex-wrap: wrap
-    }
-    logo-font {
-        font-family: "arponasans", sans-serif;
-        font-size: 2rem;
-        color: white;
-        display: list-item;
-        list-style: none;
-        justify-content: center;
-        max-width: 100px;
-        line-height: 1;
-        margin-block-start: 0;
-        margin-block-end: 0.3em;
-        margin-inline-start: 0.5em;
-        margin-inline-end: 0.5em;
-        transform: translate(-57%, 0%)
-    }
-    .burger {
-        display: block
-    }
-}
 
 .card-section {
     display: flex;
@@ -1514,52 +1438,6 @@ body {
     margin-top: 5%
 }
 
-@media (max-width: 1440px) {
-    .mid-text {
-        font-size: 0.8rem
-    }
-    .mid-text-bigger {
-        font-size: 0.9rem
-    }
-    .navbar {
-        display: none
-    }
-    .card-section {
-        flex-wrap: wrap
-    }
-    .text-card-content {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        color: #333
-    }
-    .school-info {
-        display: none
-    }
-    .image-container {
-        flex-wrap: wrap;
-        flex-direction: column-reverse
-    }
-    .image-container img {
-        max-width: 380px
-    }
-    logo-font {
-        font-family: "arponasans", sans-serif;
-        font-size: 2rem;
-        display: list-item;
-        list-style: none;
-        justify-content: center;
-        max-width: 100px;
-        line-height: 1;
-        margin-block-start: 0;
-        margin-block-end: 0.3em;
-        margin-inline-start: 0.5em;
-        margin-inline-end: 0.5em;
-        transform: translate(-57%, 0%)
-    }
-    .burger {
-        display: block
-    }
-}
 
 .download-btn {
     --width: 220px;
@@ -1707,52 +1585,6 @@ body {
     }
 }
 
-@media (max-width: 1440px) {
-    .mid-text {
-        font-size: 1rem
-    }
-    .mid-text-bigger {
-        font-size: 0.9rem
-    }
-    .navbar {
-        display: none
-    }
-    .card-section {
-        flex-wrap: wrap
-    }
-    .text-card-content {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        color: #333
-    }
-    .school-info {
-        display: none
-    }
-    .image-container {
-        flex-wrap: wrap;
-        flex-direction: column-reverse
-    }
-    .image-container img {
-        max-width: 380px
-    }
-    logo-font {
-        font-family: "arponasans", sans-serif;
-        font-size: 2rem;
-        display: list-item;
-        list-style: none;
-        justify-content: center;
-        max-width: 100px;
-        line-height: 1;
-        margin-block-start: 0;
-        margin-block-end: 0.3em;
-        margin-inline-start: 0.5em;
-        margin-inline-end: 0.5em;
-        transform: translate(-57%, 0%)
-    }
-    .burger {
-        display: block
-    }
-}
 
 @font-face {
     font-family: "Rowdies-Bold";
@@ -1781,52 +1613,6 @@ logo-font {
     margin-inline-end: 0.5em
 }
 
-@media (max-width: 1440px) {
-    .mid-text {
-        font-size: 0.8rem
-    }
-    .mid-text-bigger {
-        font-size: 0.9rem
-    }
-    .navbar {
-        display: none
-    }
-    .card-section {
-        flex-wrap: wrap
-    }
-    .text-card-content {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        color: #333
-    }
-    .school-info {
-        display: none
-    }
-    .image-container {
-        flex-wrap: wrap;
-        flex-direction: column-reverse
-    }
-    .image-container img {
-        max-width: 380px
-    }
-    logo-font {
-        font-family: "Rowdies-Bold", sans-serif;
-        font-size: 2rem;
-        display: list-item;
-        list-style: none;
-        justify-content: center;
-        max-width: 100px;
-        line-height: 1;
-        margin-block-start: 0;
-        margin-block-end: 0.3em;
-        margin-inline-start: 0.5em;
-        margin-inline-end: 0.5em;
-        transform: translate(-57%, 0%)
-    }
-    .burger {
-        display: block
-    }
-}
 
 #insta-feed {
     text-align: center;
