@@ -99,9 +99,90 @@
     </header>
     <section class="highlight-section">
         <h1 class="big-text">Fotografie</h1>
-        
+        <div class="gallery-container">
+            <div class="gallery-grid">
+                <!-- Add your 6 images (replace placeholder URLs) -->
+                <div class="gallery-item">
+                    <img src="image1.jpg" alt="Gallery Image 1">
+                    <div class="image-overlay">
+                        <p class="image-caption">Caption 1</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image2.jpg" alt="Gallery Image 2">
+                    <div class="image-overlay">
+                        <p class="image-caption">Caption 2</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image3.jpg" alt="Gallery Image 3">
+                    <div class="image-overlay">
+                        <p class="image-caption">Caption 3</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image4.jpg" alt="Gallery Image 4">
+                    <div class="image-overlay">
+                        <p class="image-caption">Caption 4</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image5.jpg" alt="Gallery Image 5">
+                    <div class="image-overlay">
+                        <p class="image-caption">Caption 5</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image6.jpg" alt="Gallery Image 6">
+                    <div class="image-overlay">
+                        <p class="image-caption">Caption 6</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image7.jpg" alt="Gallery Image 6">
+                    <div class="image-overlay">
+                        <p class="image-caption">Caption 6</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image8.jpg" alt="Gallery Image 6">
+                    <div class="image-overlay">
+                        <p class="image-caption">Caption 6</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image9.jpg" alt="Gallery Image 6">
+                    <div class="image-overlay">
+                        <p class="image-caption">Caption 6</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image10.jpg" alt="Gallery Image 6">
+                    <div class="image-overlay">
+                        <p class="image-caption">Caption 6</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="expand-button" onclick="toggleGallery()">Rozbalit galerii</button>
+            </div>
+        </div>
     </section>
 
+    <script>
+        function toggleGallery() {
+            const gallery = document.querySelector('.gallery-grid');
+            const button = document.querySelector('.expand-button');
+            
+            gallery.classList.toggle('expanded');
+            
+            if (gallery.classList.contains('expanded')) {
+                button.textContent = 'Zabalit galerii';
+            } else {
+                button.textContent = 'Rozbalit galerii';
+            }
+        }
+    </script>
 </body>
 </html>
     <section class="school-info">
