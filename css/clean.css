@@ -2109,3 +2109,54 @@ iframe {
         padding: 1rem;
     }
 }
+
+.page-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.contribution-section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.role-title {
+    color: #3498db;
+    margin-top: 0;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+.contributor-list {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.contributor-list li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.contributor-list li::before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+}
+
+body-two {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    background-color: #f5f5f5;
+}
