@@ -1,0 +1,1829 @@
+body {
+    font-family: "ArponaRegularita", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #444;
+    scroll-behavior: smooth
+}
+
+a {
+    text-decoration: none
+}
+
+.text {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6
+}
+
+.text-card {
+    max-width: 750px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center
+}
+
+.text-card-content {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #333
+}
+
+/* Header and Navbar */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #006297;
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000
+}
+
+.logo img {
+    max-height: 80px;
+    width: auto
+}
+
+.navbar {
+    flex: 1;
+    display: flex;
+    justify-content: center
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 10;
+    margin: 0;
+    gap: 25px
+}
+
+.navbar ul li {
+    position: relative
+}
+
+.navbar ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #036;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    transform: translatey(-10px);
+    transition: opacity 1.5s ease, transform 1.5s ease, visibility 1.5s ease;
+    min-width: 240px;
+    visibility: hidden;
+    text-align: left
+}
+
+.navbar ul li:hover .dropdown {
+    display: block;
+    opacity: 1;
+    transform: translatey(0);
+    visibility: visible
+}
+
+.navbar ul li .dropdown li {
+    padding: 8px 16px
+}
+
+.navbar ul li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 0 5px;
+    transition: color 0.3s ease
+}
+
+.navbar ul li .dropdown a {
+    display: block;
+    color: #C1E1E3;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 5px 10px;
+    text-align: left
+}
+
+.navbar ul li .dropdown a:hover {
+    background-color: #0056b3
+}
+
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    right: 10;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: white;
+    transition: width 0.3s ease, left 0.3s ease
+}
+
+.navbar ul li a:hover::after {
+    width: 97%;
+    left: 0
+}
+
+.navbar ul li a:not(:hover)::after {
+    width: 0;
+    right: 3%
+}
+
+.navbar ul li a:hover {
+    color: white
+}
+
+.navbar ul li.social-icon {
+    padding-left: 0
+}
+
+.navbar ul li.social-icon a {
+    color: white;
+    float: right;
+    transition: transform 0.3s ease
+}
+
+.navbar ul li.social-icon a:hover {
+    transform: scale(1.2)
+}
+
+.navbar ul li.social-icon i {
+    font-size: 24px
+}
+
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+    .navbar ul li {
+        margin: 10px 0
+    }
+
+    .hero-overlay {
+        flex-direction: column;
+        align-items: flex-start
+    }
+    main {
+        margin: 10px 0
+    }
+}
+
+.svg-divider {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 0
+}
+
+.svg-divider svg {
+    display: block;
+    width: 100%;
+    height: auto
+}
+
+.svg-divider path {
+    fill: #f4f4f9
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 70vh
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #404057;
+    font-size: 1.5rem;
+    z-index: 1;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+}
+
+.hero-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px
+}
+
+.hero-overlay p {
+    font-size: 1.5rem
+
+}
+
+/* Card */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: center
+}
+
+.card h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c2c6c;
+    margin-bottom: 20px;
+    line-height: 1.4
+}
+
+.card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c2c6c;
+    margin-top: 30px
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px
+}
+
+.card .btn-primary {
+    background-color: #2c2c6c;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, padding-left 0.3s ease
+}
+
+.card .btn-primary::before {
+    content: "➜";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translatey(-50%);
+    font-size: 16px;
+    color: white;
+    transition: left 0.3s ease
+}
+
+.card .btn-primary:hover {
+    background-color: #1a1a4c;
+    padding-left: 40px
+}
+
+.card .btn-primary:hover::before {
+    left: 10px
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 15px
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px
+}
+
+/* Curved Overlay */
+.hero-curve {
+    position: absolute;
+    top: 800px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    margin-top: -5px;
+    z-index: 1
+}
+
+.hero-curve svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: translatey(1px)
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #036, #0056b3);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #0056b3, #036);
+    color: #FFD700;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05)
+}
+
+.btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 10px 2px rgba(0, 86, 179, 0.8)
+}
+
+.section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+}
+
+.section h2 {
+    color: #036;
+    margin-bottom: 10px;
+    font-size: 28px
+}
+
+.section p {
+    line-height: 1.8
+}
+
+.school-info {
+    background-color: #f9f9f9;
+    padding: 20px 20px;
+    text-align: center
+}
+
+.school-info-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0;
+    flex-wrap: nowrap;
+    text-align: left
+}
+
+.school-info-container div {
+    flex: 0 0 auto;
+    padding: 0 5px;
+    min-width: 200px
+}
+
+.school-info h3 {
+    font-size: 2rem;
+    margin-bottom: 5px
+}
+
+.school-info p {
+    font-size: 1rem;
+    line-height: 1.8
+}
+
+.normal-text {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: #000;
+    font-family: "ArponaRegularita", sans-serif;
+    max-width: 600px;
+    margin: 0 15%;
+    text-align: justify;
+    font-weight: 300;
+    margin-top: 5px
+}
+
+.normal-text-weight {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: #000;
+    font-family: "ArponaRegularita", sans-serif;
+    max-width: 600px;
+    margin: 0 15%;
+    text-align: justify;
+    font-weight: 700;
+    margin-top: 15px
+}
+
+.normal-text-no-font {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: #000;
+    font-family: "Arial", sans-serif;
+    max-width: 600px;
+    margin: 0 15%;
+    text-align: justify;
+    font-weight: 300;
+    margin-top: 5px
+}
+
+.mid-text {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #333;
+    font-family: "ArponaSemibold", sans-serif;
+    max-width: 600px;
+    margin: 10px 15%;
+    text-align: justify;
+    font-weight: 700
+}
+
+.bigger-text {
+    font-size: 1.7rem;
+    line-height: 1.4;
+    color: #333;
+    font-family: "ArponaSemibold", sans-serif;
+    max-width: 600px;
+    margin: 10px auto;
+    text-align: center;
+    font-weight: 750;
+    margin-top: 55px;
+    margin-bottom: 25px
+}
+
+.bigger-text-no-top {
+    font-size: 1.7rem;
+    line-height: 1.4;
+    color: #333;
+    font-family: "ArponaSemibold", sans-serif;
+    max-width: 600px;
+    margin: 10px auto;
+    text-align: center;
+    font-weight: 750;
+    margin-top: 15px;
+    margin-bottom: 25px
+}
+
+.bigger-text-middle {
+    font-size: 1.9rem;
+    line-height: 1.4;
+    color: #333;
+    font-family: "ArponaSemibold", sans-serif;
+    margin: 10px auto;
+    text-align: center;
+    font-weight: 750;
+    margin-top: 55px;
+    margin-bottom: 25px
+}
+
+.text-image-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+.text-container {
+    flex: 2
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%
+}
+
+.image-container img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+}
+
+/* Footer */
+.footer {
+    background-color: #036;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px
+}
+
+/* Animated Button */
+.animated-button {
+    position: relative;
+    display: inline-grid;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    font-weight: 600;
+    color: #006297;
+    box-shadow: 0 0 0 2px #006297;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1)
+}
+
+.animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: #006297;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1)
+}
+
+.animated-button .arr-1 {
+    right: 16px
+}
+
+.animated-button .arr-2 {
+    left: -25%
+}
+
+.animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #006297;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1)
+}
+
+.animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translatex(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1)
+}
+
+.animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #fff;
+    border-radius: 12px
+}
+
+.animated-button:hover .arr-1 {
+    right: -25%
+}
+
+.animated-button:hover .arr-2 {
+    left: 16px
+}
+
+.animated-button:hover .text {
+    transform: translatex(12px)
+}
+
+.animated-button:hover svg {
+    fill: #fff
+}
+
+.animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px #006297
+}
+
+.animated-button:hover .circle {
+    width: 250px;
+    height: 250px;
+    opacity: 1
+}
+
+body, h1 {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+    background-color: #f4f4f9;
+    color: #333
+}
+
+header {
+    padding: 20px 0;
+    background: #333;
+    color: #fff
+}
+
+.highlight-section {
+    position: relative;
+    margin: 100px 0;
+    text-align: center
+}
+
+.big-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #006297;
+    display: inline-block;
+    position: relative
+}
+
+.big-text::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 13px;
+    background-color: #006297;
+    bottom: -10px;
+    left: 0;
+    transition: width 1s ease-in-out
+}
+
+.big-text.visible::after {
+    width: 100%
+}
+
+/* Image cards */
+#new-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 13px;
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto
+}
+
+#new-cards-container .custom-card {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
+
+#new-cards-container .custom-card svg {
+    fill: #000;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 3px
+}
+
+#new-cards-container .custom-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px #000;
+    background-color: #f2f2f2;
+    color: #fff
+}
+
+#new-cards-container .custom-card__content {
+    color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    transform: rotatex(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
+
+#new-cards-container .custom-card:hover .custom-card__content {
+    transform: rotatex(0deg)
+}
+
+.custom-card__title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #036;
+    margin-bottom: 10px
+}
+
+#new-cards-container .custom-card:hover svg {
+    scale: 0
+}
+
+#new-cards-container .custom-card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #000;
+    line-height: 1.4
+}
+.bu
+rger {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    display: none
+}
+
+.burger input {
+    display: none
+}
+
+.burger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #C1E1E3;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out
+}
+
+.burger span:nth-of-type(1) {
+    top: 0;
+    transform-origin: left center
+}
+
+.burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translatey(-50%);
+    transform-origin: left center
+}
+
+.burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translatey(-100%)
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0;
+    left: 5px
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px
+}
+
+.burger {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    display: none;
+    z-index: 1001
+}
+
+.burger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out
+}
+
+.fullscreen-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 98, 151, 0.95);
+    color: white;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0
+}
+
+#burger:checked ~ .fullscreen-section {
+    display: flex;
+    opacity: 1
+}
+
+@media (max-width: 1440px) {
+    .navbar {
+        display: none
+    }
+
+    .card-section {
+        flex-wrap: wrap
+    }
+
+    .text-card-content {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #333
+    }
+
+    .school-info {
+        display: none
+    }
+
+    .image-container {
+        flex-wrap: wrap;
+        flex-direction: column-reverse
+    }
+
+    .image-container img {
+        max-width: 150px
+    }
+
+    logo-font {
+        font-family: "arponasans", sans-serif;
+        font-size: 2rem;
+        display: list-item;
+        list-style: none;
+        justify-content: center;
+        max-width: 100px;
+        line-height: 1;
+        margin-block-start: 0;
+        margin-block-end: 0.3em;
+        margin-inline-start: 0.5em;
+        margin-inline-end: 0.5em;
+        transform: translate(-57%, 0%)
+    }
+
+    .burger {
+        display: block
+    }
+
+    .hero-container {
+        position: relative;
+        width: 100%;
+        height: 70%
+    }
+}
+
+.fullscreen-navbar {
+    margin-bottom: 20px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0
+}
+
+.fullscreen-navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px
+}
+
+.fullscreen-navbar li {
+    position: relative
+}
+
+.fullscreen-navbar a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 0;
+    transition: color 0.3s ease
+}
+
+.fullscreen-navbar a:hover {
+    color: #FFD700
+}
+
+.fullscreen-navbar .dropdown {
+    display: none;
+    top: 100%;
+    left: 0;
+    background-color: #036;
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1001
+}
+
+.fullscreen-navbar .dropdown li {
+    margin: 5px 0
+}
+
+.fullscreen-navbar .dropdown a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    display: block;
+    text-align: left
+}
+
+.fullscreen-navbar li:hover .dropdown {
+    display: block
+}
+
+.card-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px
+}
+
+.cards-multiple {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center
+}
+
+.cards-multiple h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px
+}
+
+.cards-multiple p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px
+}
+
+.cards-multiple button {
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer
+}
+
+.card-one {
+    border-top: 4px solid #006297
+}
+
+.card-two {
+    border-top: 4px solid #64b5f6
+}
+
+.card-three {
+    border-top: 4px solid #006297
+}
+
+.event-date {
+    font-family: "Roboto Condensed SemiBold", sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    margin-right: 5%
+}
+
+.event-location {
+    font-family: "ArponaRegularita", sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #555;
+    margin-bottom: 2rem
+}
+
+.highlight-message {
+    font-family: "ArponaSemibold", sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #006297;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    border-top: 2px solid #006297;
+    border-bottom: 2px solid #006297;
+    margin-top: 2%
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 3rem
+}
+
+.gallery-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s cubic-bezier(0.3, 0.18, 0, 0.98)
+}
+
+@media (max-width: 1380px) {
+    .gallery-image {
+        width: 90%
+    }
+}
+
+.gallery-image:hover {
+    transform: scale(1.03)
+}
+
+.more-photos-btn {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem 0
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr
+    }
+    .event-date {
+        font-size: 1.2rem
+    }
+    .highlight-message {
+        font-size: 1.4rem
+    }
+    .image-grid {
+        grid-template-columns: 1fr
+    }
+    .gallery-image {
+        height: 200px
+    }
+    .modal-content {
+        width: 90%
+    }
+}
+
+logo-font {
+    font-family: "arponasans", sans-serif;
+    font-size: 2rem;
+    color: white;
+    display: list-item;
+    list-style: none;
+    justify-content: center;
+    max-width: 100px;
+    line-height: 1;
+    margin-block-start: 0;
+    margin-block-end: 0.3em;
+    margin-inline-start: 0.5em;
+    margin-inline-end: 0.5em
+}
+
+.normal-text {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: #000;
+    font-family: "ArponaRegularita", sans-serif;
+    max-width: 600px;
+    margin: 0 15%;
+    text-align: justify;
+    font-weight: 300;
+    margin-top: 25px
+}
+
+.mid-text {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: #333;
+    font-family: "ArponaSemibold", sans-serif;
+    max-width: 1450px;
+    margin: 10px 15%;
+    text-align: justify;
+    font-weight: 700
+}
+
+.mid-text-bigger {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: #333;
+    font-family: "ArponaSemibold", sans-serif;
+    max-width: 1450px;
+    margin: 10px 15%;
+    text-align: justify;
+    font-weight: 800
+}
+
+.bigger-text {
+    font-size: 1.7rem;
+    line-height: 1.4;
+    color: #333;
+    font-family: "ArponaSemibold", sans-serif;
+    max-width: 600px;
+    margin: 10px auto;
+    text-align: center;
+    font-weight: 800;
+    margin-top: 65px;
+    margin-bottom: 30px
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%
+}
+
+.image-container img {
+    max-width: 550px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+}
+
+.animated-button {
+    margin-top: 2%;
+    position: relative;
+    display: inline-grid;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    font-weight: 600;
+    color: #006297;
+    box-shadow: 0 0 0 2px #006297;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1)
+}
+
+@media (max-width: 1440px) {
+    .mid-text {
+        font-size: 0.9rem
+    }
+    .mid-text-bigger {
+        font-size: 1.2rem
+    }
+    .navbar {
+        display: none
+    }
+    .card-section {
+        flex-wrap: wrap
+    }
+    .text-card-content {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #333
+    }
+    .school-info {
+        display: none
+    }
+    .image-container {
+        flex-wrap: wrap;
+        flex-direction: column-reverse
+    }
+    .image-container img {
+        max-width: 380px
+    }
+    logo-font {
+        font-family: "arponasans", sans-serif;
+        font-size: 2rem;
+        display: list-item;
+        list-style: none;
+        justify-content: center;
+        max-width: 100px;
+        line-height: 1;
+        margin-block-start: 0;
+        margin-block-end: 0.3em;
+        margin-inline-start: 0.5em;
+        margin-inline-end: 0.5em;
+        transform: translate(-57%, 0%)
+    }
+    .burger {
+        display: block
+    }
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease
+}
+
+.gallery-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 98, 151, 0.8);
+    color: white;
+    padding: 10px;
+    font-family: "ArponaRegularita", sans-serif;
+    font-size: 0.9rem;
+    text-align: center
+}
+
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9)
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 60%;
+    max-width: 700px;
+    border-radius: 8px
+}
+
+.modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
+    font-family: "ArponaRegularita", sans-serif
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer
+}
+
+.close-modal:hover {
+    color: #006297
+}
+
+@media (max-width: 1024px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #444;
+    scroll-behavior: smooth
+}
+
+.normal-text {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: #000;
+    font-family: "Arial", sans-serif;
+    max-width: 550px;
+    margin: 0 6%;
+    text-align: justify
+}
+
+.normal-text-top {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: #000;
+    font-family: "Arial", sans-serif;
+    max-width: 550px;
+    margin: 0 6%;
+    text-align: justify;
+    margin-top: 25%
+}
+
+.mid-text {
+    font-size: 1.45rem;
+    line-height: 1.4;
+    color: #333;
+    font-family: "Arial", sans-serif;
+    margin: 10px 6%;
+    text-align: justify;
+    font-weight: 600
+}
+
+.bigger-text {
+    font-size: 1.7rem;
+    line-height: 1.4;
+    color: #333;
+    font-family: "Arial", sans-serif;
+    margin: 10px auto;
+    text-align: center;
+    font-weight: 750;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    max-width: 1100px
+}
+
+.bigger-text-clickable {
+    font-size: 1.33rem;
+    line-height: 1.4;
+    color: #333;
+    font-family: "Arial", sans-serif;
+    margin: 0 3%;
+    text-align: center;
+    font-weight: 750;
+    margin-top: 35px;
+    margin-bottom: 25px
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: -23%
+}
+
+@media (max-width: 1440px) {
+    .navbar {
+        display: none
+    }
+    .bigger-text {
+        font-size: 1.1rem
+    }
+    .mid-text {
+        font-size: 0.9rem
+    }
+    .normal-text {
+        font-size: 0.9rem
+    }
+    .bigger-text-clickable {
+        font-size: 0.9rem
+    }
+    .text-card-content {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #333
+    }
+    .school-info {
+        display: none
+    }
+    .image-container {
+        max-width: 370px;
+        margin-top: 25%;
+        margin-left: 4%
+    }
+    .card-section {
+        flex-wrap: wrap
+    }
+    logo-font {
+        font-family: "arponasans", sans-serif;
+        font-size: 2rem;
+        color: white;
+        display: list-item;
+        list-style: none;
+        justify-content: center;
+        max-width: 100px;
+        line-height: 1;
+        margin-block-start: 0;
+        margin-block-end: 0.3em;
+        margin-inline-start: 0.5em;
+        margin-inline-end: 0.5em;
+        transform: translate(-57%, 0%)
+    }
+    .burger {
+        display: block
+    }
+}
+
+.card-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 5%
+}
+
+.mid-text {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #333;
+    font-family: "ArponaSemibold", sans-serif;
+    max-width: 1450px;
+    margin: 10px 15%;
+    text-align: justify;
+    font-weight: 700
+}
+
+.mid-text-bigger {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: #333;
+    font-family: "ArponaSemibold", sans-serif;
+    max-width: 1450px;
+    margin: 10px 15%;
+    text-align: justify;
+    font-weight: 800
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-top: 5%
+}
+
+@media (max-width: 1440px) {
+    .mid-text {
+        font-size: 0.8rem
+    }
+    .mid-text-bigger {
+        font-size: 0.9rem
+    }
+    .navbar {
+        display: none
+    }
+    .card-section {
+        flex-wrap: wrap
+    }
+    .text-card-content {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #333
+    }
+    .school-info {
+        display: none
+    }
+    .image-container {
+        flex-wrap: wrap;
+        flex-direction: column-reverse
+    }
+    .image-container img {
+        max-width: 380px
+    }
+    logo-font {
+        font-family: "arponasans", sans-serif;
+        font-size: 2rem;
+        display: list-item;
+        list-style: none;
+        justify-content: center;
+        max-width: 100px;
+        line-height: 1;
+        margin-block-start: 0;
+        margin-block-end: 0.3em;
+        margin-inline-start: 0.5em;
+        margin-inline-end: 0.5em;
+        transform: translate(-57%, 0%)
+    }
+    .burger {
+        display: block
+    }
+}
+
+.download-btn {
+    --width: 220px;
+    --height: 50px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #006297;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "ArponaRegularita", sans-serif;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none
+}
+
+.download-btn::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    background-color: var(--tooltip-color);
+    font-size: 0.9rem;
+    color: #111;
+    border-radius: 0.25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.download-btn::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: var(--tooltip-color);
+    left: calc(50% - 10px);
+    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px)
+}
+
+.download-btn::after, .download-btn::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s
+}
+
+.download-btn-wrapper, .btn-text, .btn-icon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff
+}
+
+.btn-text {
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    transition: top 0.5s
+}
+
+.btn-icon {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.5s
+}
+
+.download-btn:hover {
+    background: #036
+}
+
+.download-btn:hover .btn-text {
+    top: -100%
+}
+
+.download-btn:hover .btn-icon {
+    top: 0
+}
+
+.download-btn:hover:before, .download-btn:hover:after {
+    opacity: 1;
+    visibility: visible
+}
+
+.download-btn:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px)
+}
+
+.download-btn:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button))
+}
+
+.content-wrapper {
+    display: flex;
+    margin-bottom: 2rem;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10%
+}
+
+.image-container {
+    flex: 1
+}
+
+.jidelna-photo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease
+}
+
+.jidelna-photo:hover {
+    transform: scale(1.02)
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column
+    }
+    .image-container {
+        width: 90%;
+        order: 2
+    }
+    .text-content {
+        width: 100%;
+        order: 1
+    }
+    .jidelna-photo {
+        height: auto
+    }
+}
+
+@media (max-width: 1440px) {
+    .mid-text {
+        font-size: 1rem
+    }
+    .mid-text-bigger {
+        font-size: 0.9rem
+    }
+    .navbar {
+        display: none
+    }
+    .card-section {
+        flex-wrap: wrap
+    }
+    .text-card-content {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #333
+    }
+    .school-info {
+        display: none
+    }
+    .image-container {
+        flex-wrap: wrap;
+        flex-direction: column-reverse
+    }
+    .image-container img {
+        max-width: 380px
+    }
+    logo-font {
+        font-family: "arponasans", sans-serif;
+        font-size: 2rem;
+        display: list-item;
+        list-style: none;
+        justify-content: center;
+        max-width: 100px;
+        line-height: 1;
+        margin-block-start: 0;
+        margin-block-end: 0.3em;
+        margin-inline-start: 0.5em;
+        margin-inline-end: 0.5em;
+        transform: translate(-57%, 0%)
+    }
+    .burger {
+        display: block
+    }
+}
+
+@font-face {
+    font-family: "Rowdies-Bold";
+    src: url(fonts/Rowdies-Bold.woff) format("woff"), url(fonts/Rowdies-Bold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal
+}
+
+logo-font {
+    font-family: "Rowdies-Bold", sans-serif
+}
+
+logo-font {
+    font-family: "Rowdies-Bold", sans-serif !important;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: white;
+    display: list-item;
+    list-style: none;
+    justify-content: center;
+    max-width: 100px;
+    line-height: 1;
+    margin-block-start: 0;
+    margin-block-end: 0.3em;
+    margin-inline-start: 0.5em;
+    margin-inline-end: 0.5em
+}
+
+@media (max-width: 1440px) {
+    .mid-text {
+        font-size: 0.8rem
+    }
+    .mid-text-bigger {
+        font-size: 0.9rem
+    }
+    .navbar {
+        display: none
+    }
+    .card-section {
+        flex-wrap: wrap
+    }
+    .text-card-content {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #333
+    }
+    .school-info {
+        display: none
+    }
+    .image-container {
+        flex-wrap: wrap;
+        flex-direction: column-reverse
+    }
+    .image-container img {
+        max-width: 380px
+    }
+    logo-font {
+        font-family: "Rowdies-Bold", sans-serif;
+        font-size: 2rem;
+        display: list-item;
+        list-style: none;
+        justify-content: center;
+        max-width: 100px;
+        line-height: 1;
+        margin-block-start: 0;
+        margin-block-end: 0.3em;
+        margin-inline-start: 0.5em;
+        margin-inline-end: 0.5em;
+        transform: translate(-57%, 0%)
+    }
+    .burger {
+        display: block
+    }
+}
