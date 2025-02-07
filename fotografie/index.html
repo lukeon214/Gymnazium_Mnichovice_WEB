@@ -9,6 +9,7 @@
   <link rel="website icon" href="%PUBLIC_URL%/website_logo_up.png" />
   <link rel="stylesheet" href="../css/clean.css?v=2">
   <link rel="stylesheet" href="../css/font_styles.css?v=2">
+  <link rel="stylesheet" href="../css/gallery_style.css?v=2">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
     <header class="header">
@@ -97,32 +98,24 @@
         </nav>
     </header>
     <section class="highlight-section">
-        <h1 class="big-text">Fotogalerie</h1>
-        <div class="gallery-container">
-            <div class="image-grid">
-                <div class="gallery-item">
-                    <img src="../fotos/IMG_9325.jpg" 
-                         alt="Laboratorní práce" 
-                         class="gallery-image"
-                         loading="lazy">
-                    <div class="image-caption">Prezentace na Dnech otevřených dveří 2025</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="../fotos/PHOTO-2025-01-20-19-46-29.jpg" 
-                         alt="Laboratorní práce" 
-                         class="gallery-image"
-                         loading="lazy">
-                    <div class="image-caption">Den otevřených dveří 2025</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="../fotos/PHOTO-2025-01-20-19-46-31.jpg" 
-                         alt="Laboratorní práce" 
-                         class="gallery-image"
-                         loading="lazy">
-                    <div class="image-caption">DOD 2025</div>
-                </div>
-
+        <h1 class="big-text">Fotografie</h1>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="../fotos/IMG_9314.jpg" data-src="full1.jpg" alt="Image 1">
             </div>
+            <div class="gallery-item">
+                <img src="../fotos/IMG_9324.jpg" data-src="full2.jpg" alt="Image 2">
+            </div>
+            <!-- Add more images here -->
+        </div>
+
+        <div class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-content">
+                <img class="lightbox-img" src="" alt="">
+            </div>
+            <div class="lightbox-arrow prev">&#10094;</div>
+            <div class="lightbox-arrow next">&#10095;</div>
         </div>
     </section>
 
@@ -133,27 +126,69 @@
     </div>
 
     <script>
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById("modalImage");
-        const captionText = document.getElementById("modalCaption");
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.querySelector('.lightbox');
+        const lightboxImg = document.querySelector('.lightbox-img');
+        const closeBtn = document.querySelector('.lightbox-close');
+        const prevArrow = document.querySelector('.prev');
+        const nextArrow = document.querySelector('.next');
+        let currentIndex = 0;
+        let touchStartX = 0;
+        let touchEndX = 0;
 
-        document.querySelectorAll('.gallery-image').forEach(img => {
-            img.onclick = function(){
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                captionText.innerHTML = this.nextElementSibling.innerHTML;
+        const imageSources = Array.from(galleryItems).map(item => 
+            item.querySelector('img').getAttribute('data-src')
+        );
+
+        function openLightbox(index) {
+            currentIndex = index;
+            lightbox.classList.add('active');
+            lightboxImg.src = imageSources[currentIndex];
+        }
+
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + imageSources.length) % imageSources.length;
+            lightboxImg.src = imageSources[currentIndex];
+        }
+
+        function showNext() {
+            currentIndex = (currentIndex + 1) % imageSources.length;
+            lightboxImg.src = imageSources[currentIndex];
+        }
+
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => openLightbox(index));
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        prevArrow.addEventListener('click', showPrev);
+        nextArrow.addEventListener('click', showNext);
+
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'ArrowLeft') showPrev();
+                if (e.key === 'ArrowRight') showNext();
+                if (e.key === 'Escape') lightbox.classList.remove('active');
             }
         });
 
-        document.getElementsByClassName("close-modal")[0].onclick = function() { 
-            modal.style.display = "none";
-        }
+        lightbox.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
 
-        modal.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
+        lightbox.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const diffX = touchStartX - touchEndX;
+            
+            if (diffX > 50) {
+                showNext();
+            } else if (diffX < -50) {
+                showPrev();
             }
-        }
+        });
     </script>
 </body>
 </html>
