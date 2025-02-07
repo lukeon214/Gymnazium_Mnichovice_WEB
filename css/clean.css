@@ -655,7 +655,7 @@ header {
 
 .highlight-section {
     position: relative;
-    margin: 100px 0;
+    margin: 40px 0;
     text-align: center
 }
 
@@ -1348,7 +1348,7 @@ body {
     font-family: "Arial", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f4f4f9;
     color: #444;
     scroll-behavior: smooth
 }
@@ -2000,4 +2000,77 @@ logo-font {
     .jidelna-title::after {
         width: 80px;
     }
+}
+
+.contact-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #004d99;
+    color: white;
+}
+
+.contact-header h1 {
+font-size: 2.5em;
+margin: 0;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.contact-details, .additional-info, .transport-info {
+    flex: 1;
+    min-width: 280px;
+    margin: 10px;
+}
+
+h2, h3 {
+    color: #004d99;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    }
+
+p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin: 10px 0;
+}
+
+a {
+    color: #004d99;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; 
+}
+
+iframe {
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.transport-info p {
+    font-size: 1.1em;
+}
+
+.section-up {
+    font-size: 2rem;
+    font-weight: 800;
+    color: rgb(51, 51, 51);
+    margin: 1rem 0;
+    display: flex;
+}
+
+.text-left {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 10px 0;
+    text-align: left;
 }
