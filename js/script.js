@@ -51,26 +51,22 @@ document.querySelectorAll('.fullscreen-navbar li > a').forEach(link => {
     });
 });
 
-class LogoFont extends HTMLElement {
-    connectedCallback() {
-        this.style.fontFamily = "'ArponaMedium', sans-serif";
-    }
-}
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("../custom-scripts/instagram-feed.php")
+        .then(response => response.json())
+        .then(data => {
+            const instaContainer = document.getElementById("insta-container");
 
-customElements.define('logo-font', LogoFont);
+            if (data.error) {
+                instaContainer.innerHTML = `<p>Chyba při načítání příspěvků.</p>`;
+                return;
+            }
 
-class NormalText extends HTMLElement {
-    connectedCallback() {
-        this.style.fontFamily = "'ArponaRegularita', sans-serif";
-    }
-}
-
-customElements.define('normal-text', NormalText);
-
-class MidText extends HTMLElement {
-    connectedCallback() {
-        this.style.fontFamily = "'ArponaRegularita', sans-serif";
-    }
-}
-
-customElements.define('mid-text', MidText);
+            instaContainer.innerHTML = data.map(post => `
+                <a href="${post.link}" target="_blank">
+                    <img src="${post.image}" alt="${post.caption}">
+                </a>
+            `).join("");
+        })
+        .catch(err => console.error("Chyba:", err));
+});
