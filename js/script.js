@@ -51,6 +51,30 @@ document.querySelectorAll('.fullscreen-navbar li > a').forEach(link => {
     });
 });
 
+(async () => {
+    try {
+      const response = await fetch(
+        "https://www.instagram.com/gymnazium_mnichovice/?__a=1&__d=1"
+      );
+      const data = await response.json();
+      
+      const posts = data.graphql.user.edge_owner_to_timeline_media.edges;
+      const container = document.getElementById("instagram-container");
+  
+      posts.slice(0, 6).forEach(({ node }) => {
+        container.innerHTML += `
+          <a href="https://www.instagram.com/p/${node.shortcode}/" target="_blank">
+            <img src="${node.thumbnail_src}" alt="Instagram post">
+          </a>
+        `;
+      });
+    } catch (error) {
+      console.error("Error:", error);
+      document.getElementById("instagram-container").innerHTML = 
+        "<p>Chyba při načítání příspěvků.</p>";
+    }
+})();
+
 document.addEventListener("DOMContentLoaded", function () {
     fetch("../custom-scripts/instagram-feed.php")
         .then(response => response.json())
