@@ -883,10 +883,6 @@ rger {
         color: #333;
     }
 
-    .school-info {
-        display: none;
-    }
-
     .image-container {
         flex-wrap: wrap;
         flex-direction: column-reverse;
@@ -937,6 +933,14 @@ rger {
     .bigger-text-clickable {
         font-size: 0.9rem;
     }
+
+    .school-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .school-info p {
+        font-size: 0.7rem;
+    }
 }
 
 @media (max-width: 1160px) {
@@ -963,6 +967,12 @@ rger {
     .logo img {
         max-height: 70px;
     }
+
+    .school-info {
+        display: none;
+    }
+
+    
 
 }
 
@@ -1440,7 +1450,7 @@ body {
 }
 
 .mid-text {
-    font-size: 1.2rem;
+    font-size: 1.45rem;
     line-height: 1.4;
     color: #333;
     font-family: "ArponaSemibold", sans-serif;
@@ -1450,7 +1460,29 @@ body {
     font-weight: 700
 }
 
+.mid-text-two {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: #333;
+    font-family: "ArponaSemibold", sans-serif;
+    max-width: 1450px;
+    margin: 10px 15%;
+    text-align: justify;
+    font-weight: 700;
+}
+
 .mid-text-bigger {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: #333;
+    font-family: "ArponaSemibold", sans-serif;
+    max-width: 1450px;
+    margin: 10px 15%;
+    text-align: justify;
+    font-weight: 800
+}
+
+.mid-text-head {
     font-size: 1.4rem;
     line-height: 1.4;
     color: #333;
@@ -1937,15 +1969,17 @@ iframe {
     padding: 40px;
     margin-bottom: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    margin: 0 auto 30px
+    margin: 0 auto 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
 }
 
 .role-title {
-    color: #3498db;
     margin-top: 0;
-    border-bottom: 2px solid #3498db;
+    border-bottom: 2px solid #000000;
     padding-bottom: 5px;
 }
 

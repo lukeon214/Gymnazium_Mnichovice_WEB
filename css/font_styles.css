@@ -46,6 +46,7 @@ h1, h2, h3, a {
 .big-text,
 .bigger-text,
 .mid-text,
+.mid-text-head,
 .normal-text,
 .normal-text-list,
 .bigger-text-clickable {
@@ -64,6 +65,10 @@ h1, h2, h3, a {
     font-size: 0.8rem;
     margin-left: 40%;
   }
+
+  .mid-text-bigger {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 837px) {
@@ -81,5 +86,32 @@ h1, h2, h3, a {
     margin-block-end: 0.3em;
     margin-inline-start: 0.5em;
     margin-inline-end: 0.5em;
+  }
+
+  .bigger-text {
+    font-size: 1.3rem;
+  }
+
+  .mid-text {
+    font-size: 100%;
+  }
+
+  .mid-text-two {
+    font-size: 70%;
+  }
+
+  .mid-text-bigger {
+    font-size: 1rem;
+  }
+
+  .mid-text-head {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .normal-text-list {
+    font-size: 1rem;
+    margin: 0 15%;
   }
 }
