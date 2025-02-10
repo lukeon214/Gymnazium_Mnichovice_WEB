@@ -956,7 +956,7 @@ rger {
     }
 }
 
-@media (max-width: 837px) {
+@media (max-width: 857px) {
     .navbar {
         display: none;
     }
@@ -1407,7 +1407,6 @@ body {
     margin: 10px auto;
     text-align: center;
     font-weight: 750;
-    margin-top: 35px;
     margin-bottom: 25px;
     max-width: 1100px
 }

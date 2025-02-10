@@ -30,7 +30,7 @@
   font-style: normal;
 }
 
-h1, h2, h3, a {
+h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
 }
@@ -43,7 +43,35 @@ h1, h2, h3, a {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Poppins SemiBold';
+  src: url('../fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+}
+
+a,
+.title {
+  font-family: 'Poppins SemiBold', sans-serif;
+}
+
+@font-face {
+  font-family: 'Poppins Medium';
+  src: url('../fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+}
+
 .big-text,
+.name {
+  font-family: 'Poppins Medium', sans-serif;
+}
+
+@font-face {
+  font-family: 'Poppins Light';
+  src: url('../fonts/Poppins/Poppins-Light.ttf') format('truetype');
+}
+
+.subtitle {
+  font-family: 'Poppins Light', sans-serif;
+}
+
 .bigger-text,
 .mid-text,
 .mid-text-head,
@@ -71,7 +99,7 @@ h1, h2, h3, a {
   }
 }
 
-@media (max-width: 837px) {
+@media (max-width: 857px) {
   logo-font {
     font-family: 'Rowdies-Bold', sans-serif;
     font-size: 1.8rem;
