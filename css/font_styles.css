@@ -1,46 +1,27 @@
-@font-face {
-    font-family: 'Rowdies-Bold';
-    src: url('../fonts/Rowdies-Bold.woff') format('woff'),
-         url('../fonts/Rowdies-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-  }
-  
-  logo-font {
-    font-family: 'Rowdies-Bold', sans-serif !important;
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-    color: white;
-    display: list-item;
-    list-style: none;
-    justify-content: center;
-    max-width: 100px;
-    line-height: 1;
-    margin-block-start: 0em;
-    margin-block-end: 0.3em;
-    margin-inline-start: 0.5em;
-    margin-inline-end: 0.5em;
+logo-font {
+  font-family: 'Rowdies-Bold', sans-serif !important;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  color: white;
+  display: list-item;
+  list-style: none;
+  justify-content: center;
+  max-width: 100px;
+  line-height: 1;
+  margin-block-start: 0em;
+  margin-block-end: 0.3em;
+  margin-inline-start: 0.5em;
+  margin-inline-end: 0.5em;
 }
 
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
-       url('../fonts/Roboto-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+p {
+  word-spacing: normal;
+  letter-spacing: normal;
 }
 
 h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
-}
-
-@font-face {
-  font-family: 'Roboto Condensed SemiBold';
-  src: url('../fonts/Roboto_Condensed-SemiBold.woff2') format('woff2'),
-       url('../fonts/Roboto_Condensed-SemiBold.ttf') format('woff');
-  font-weight: 600;
-  font-style: normal;
 }
 
 @font-face {
@@ -59,7 +40,8 @@ a,
 }
 
 .big-text,
-.name {
+.name,
+h2 {
   font-family: 'Poppins Medium', sans-serif;
 }
 
@@ -71,17 +53,14 @@ a,
 .subtitle,
 p,
 .text,
-.expand-button {
-  font-family: 'Poppins Light', sans-serif;
-}
-
+.expand-button,
 .bigger-text,
 .mid-text,
 .mid-text-head,
 .normal-text,
 .normal-text-list,
 .bigger-text-clickable {
-  font-family: 'Roboto Condensed SemiBold', sans-serif;
+  font-family: 'Poppins Light', sans-serif;
 }
 
 @media (max-width: 1440px) {
@@ -125,10 +104,12 @@ p,
 
   .mid-text {
     font-size: 100%;
+    word-spacing: normal;
+    letter-spacing: normal;
   }
 
   .mid-text-two {
-    font-size: 70%;
+    font-size: 16px;
   }
 
   .mid-text-bigger {
@@ -144,5 +125,12 @@ p,
   .normal-text-list {
     font-size: 1rem;
     margin: 0 15%;
+  }
+
+  .mid-text,
+  .normal-text-list,
+  .mid-text-head,
+  .mid-text-two {
+    text-align: left;
   }
 }
