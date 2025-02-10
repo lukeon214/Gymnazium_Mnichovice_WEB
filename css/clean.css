@@ -34,22 +34,19 @@ a {
     color: #333
 }
 
-/* Header and Navbar */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #006297;
-    padding: 10px 20px;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000
-}
-
 .logo img {
     max-height: 80px;
     width: auto
+}
+
+.logo-left img {
+    max-height: 70px;
+    width: auto;
+}
+
+.logo-mid img {
+    max-height: 70px;
+    width: auto;
 }
 
 .navbar {
@@ -943,7 +940,21 @@ rger {
     }
 }
 
-@media (max-width: 1160px) {
+@media (max-width: 9999px) {
+    .header {
+        justify-content: space-between;
+    }
+
+    .logo-left {
+        display: none;
+    }
+
+    .logo-mid {
+        display: none;
+    }
+}
+
+@media (max-width: 1211px) {
     .navbar ul li a {
         font-size: 0.7rem;
     }
@@ -952,11 +963,11 @@ rger {
     }
 
     .logo img {
-        max-height: 50px;
+        max-height: 55px;
     }
 }
 
-@media (max-width: 857px) {
+@media (max-width: 876px) {
     .navbar {
         display: none;
     }
@@ -965,15 +976,33 @@ rger {
     }
 
     .logo img {
-        max-height: 70px;
+        display: none;
+    }
+    
+    .logo-left {
+        display: block;
+    }
+
+    .logo-mid {
+        display: block;
     }
 
     .school-info {
         display: none;
     }
 
-    
+}
 
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #006297;
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000
 }
 
 .fullscreen-navbar {

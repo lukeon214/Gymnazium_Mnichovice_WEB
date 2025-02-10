@@ -68,7 +68,10 @@ a,
   src: url('../fonts/Poppins/Poppins-Light.ttf') format('truetype');
 }
 
-.subtitle {
+.subtitle,
+p,
+.text,
+.expand-button {
   font-family: 'Poppins Light', sans-serif;
 }
 
