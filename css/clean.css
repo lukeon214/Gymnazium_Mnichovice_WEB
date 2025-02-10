@@ -981,10 +981,19 @@ rger {
     
     .logo-left {
         display: block;
+        position: absolute;
+        left: 10px;
     }
 
     .logo-mid {
         display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .header {
+        height: 70px;
     }
 
     .school-info {
