@@ -34,6 +34,30 @@
     <section class="highlight-section">
         <h1 class="big-text">Aktuality</h1>
     </section>
+    <section>
+        <div class="text-image-wrapper-two">
+            <div class="text-container-two">
+                <h2>AJ pohovor nanečisto</h2>
+                <p>
+                    Přijďte si k nám vyzkoušet část školní přijímací zkoušky.
+                </p>
+                <p>
+                    <strong>úterý 18. 2.</strong> v čase mezi 14:30 - 16:30
+                </p>
+                <p>
+                    <a href="https://outlook.office365.com/book/ZkuebnpohovorvAJGymnziumMnichovice@zsmnichovice.cz/s/RB7o_1j7TUSuB06jVlYZpg2 " 
+                       target="_blank" 
+                       class="jidelna-link">
+                       Rezervace
+                    </a>
+                </p>
+            </div>
+            <div class="image-container-two">
+                <img src="../documents/qrcode.jpg" alt="qrcode">
+            </div>
+        </div>
+    </section>
+
     <iframe src="https://www.instagram.com/gymnazium_mnichovice/embed/" 
         frameborder="0" 
         scrolling="yes" 
@@ -57,9 +81,9 @@
         }
     
         document.addEventListener("DOMContentLoaded", function () {
-            loadComponent("header", "base_page_structure/header.html", initHeaderScripts);
-            loadComponent("school-info", "base_page_structure/school-info.html");
-            loadComponent("footer", "base_page_structure/footer.html");
+            loadComponent("header-pagefixed", "../base_page_structure/header-pagefixed.html", initHeaderScripts);
+            loadComponent("school-info", "../base_page_structure/school-info.html");
+            loadComponent("footer", "../base_page_structure/footer.html");
     
             function initHeaderScripts() {
                 document.getElementById('burger').addEventListener('change', function() {

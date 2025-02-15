@@ -62,9 +62,9 @@
         }
     
         document.addEventListener("DOMContentLoaded", function () {
-            loadComponent("header", "base_page_structure/header.html", initHeaderScripts);
-            loadComponent("school-info", "base_page_structure/school-info.html");
-            loadComponent("footer", "base_page_structure/footer.html");
+            loadComponent("header", "../base_page_structure/header.html", initHeaderScripts);
+            loadComponent("school-info", "../base_page_structure/school-info.html");
+            loadComponent("footer", "../base_page_structure/footer.html");
     
             function initHeaderScripts() {
                 document.getElementById('burger').addEventListener('change', function() {
