@@ -56,3 +56,77 @@
 .open-page {
     margin-block: 200px;
 }
+
+/* Main page card */
+.director-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 25px;
+  }
+  
+  .card-content {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .director-image {
+    background: #000;
+    width: 250px;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+  
+  .director-title {
+    color: #444;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    display: flex;
+  }
+  
+  .director-text {
+    color: #333;
+    line-height: 1.6;
+    font-size: 14px;
+    text-align: left;
+    max-width: 496px;
+  }
+  
+  .director-text p {
+    margin: 0;
+  }
+  
+  .director-button {
+    display: inline-block;
+    background: #0069AA;
+    color: white !important;
+    padding: 12px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: 0.3s ease;
+  }
+  
+  .director-button:hover {
+    background: #005187;
+  }
+
+  .intro-card {
+    display: flex;
+    align-items: center;
+    background-color: #D3D3D3;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.button-right {
+    display: flex;
+    flex-direction: column-reverse;
+}
