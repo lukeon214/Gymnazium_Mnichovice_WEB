@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('data/albums.json?v=2')
+    fetch('data/albums.json?v=3')
         .then(response => response.json())
         .then(data => {
             const grid = document.getElementById('album-grid');

@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
     const albumId = urlParams.get('id');
 
-    fetch('../fotografie/data/albums.json')
+    fetch('../fotografie/data/albums.json?v=3')
         .then(response => response.json())
         .then(data => {
             const album = data.albums.find(a => a.id === albumId);
