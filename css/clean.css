@@ -467,7 +467,6 @@ a {
     font-size: 1.5rem;
     line-height: 1.4;
     color: #333;
-    font-family: "ArponaSemibold", sans-serif;
     max-width: 600px;
     margin: 10px 15%;
     text-align: justify;
@@ -1262,7 +1261,6 @@ logo-font {
     font-size: 1.3rem;
     line-height: 1.4;
     color: #333;
-    font-family: "ArponaSemibold", sans-serif;
     max-width: 1450px;
     margin: 10px 15%;
     text-align: justify;
@@ -1454,7 +1452,6 @@ body {
     font-size: 1.45rem;
     line-height: 1.4;
     color: #333;
-    font-family: "Arial", sans-serif;
     margin: 10px 6%;
     text-align: justify;
     font-weight: 600
@@ -1513,7 +1510,6 @@ body {
     font-size: 1.45rem;
     line-height: 1.4;
     color: #333;
-    font-family: "ArponaSemibold", sans-serif;
     max-width: 1450px;
     margin: 10px 15%;
     text-align: justify;
@@ -1524,7 +1520,6 @@ body {
     font-size: 1.3rem;
     line-height: 1.4;
     color: #333;
-    font-family: "ArponaSemibold", sans-serif;
     max-width: 1450px;
     margin: 10px 15%;
     text-align: justify;
@@ -1535,7 +1530,6 @@ body {
     font-size: 1.4rem;
     line-height: 1.4;
     color: #333;
-    font-family: "ArponaSemibold", sans-serif;
     max-width: 1450px;
     margin: 10px 15%;
     text-align: justify;
@@ -1546,7 +1540,6 @@ body {
     font-size: 1.4rem;
     line-height: 1.4;
     color: #333;
-    font-family: "ArponaSemibold", sans-serif;
     max-width: 1450px;
     margin: 10px 15%;
     text-align: justify;
@@ -1996,6 +1989,12 @@ iframe {
     text-align: left;
 }
 
+.text-left-two {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    text-align: left;
+}
+
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -2090,4 +2089,19 @@ body-two {
     margin: 20px auto;
     padding: 0 20px;
     background-color: #f5f5f5;
+}
+
+.text-picture-wrap {
+    display: flex;
+}
+
+.text-picture-wrap-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-picture-wrap-picture {
+    width: 50%;
 }
