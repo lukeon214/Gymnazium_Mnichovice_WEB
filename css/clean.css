@@ -656,6 +656,19 @@ header {
     text-align: center
 }
 
+.highlight-section-pagefix {
+    position: relative;
+    margin: 40px 0;
+    text-align: center
+}
+.big-text-pagefix {
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: #000000;
+    display: inline-block;
+    position: relative
+}
+
 .big-text {
     font-size: 2rem;
     font-weight: bold;
@@ -1008,9 +1021,13 @@ header {
     background-color: #006297;
     padding: 10px 20px;
     color: white;
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1000
+    z-index: 1000;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .fullscreen-navbar {
