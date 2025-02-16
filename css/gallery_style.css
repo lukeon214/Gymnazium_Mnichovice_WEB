@@ -74,3 +74,60 @@
     flex-wrap: wrap;
     justify-content: flex-start;
 }
+
+.expand-button {
+    --color: #006297;
+    display: inline-block;
+    width: 11em;
+    line-height: 2.5em;
+    position: relative;
+    margin-bottom: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+}
+  
+.expand-button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 200px;
+    width: 290px;
+    border-radius: 31%;
+}
+
+.expand-button:hover {
+    color: #fff;    
+}
+
+.expand-button:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+.expand-button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.expand-button:active:before {
+    background: #ffffff;
+    transition: 0s;
+}
+  
+
+@media (max-width: 768px) {
+    .expand-button {
+        width: 7em;
+        font-size: 15px;
+        margin: 15px;
+    }
+}
