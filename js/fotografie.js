@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="card h-100 shadow-sm album-card">
                             <img src="${album.cover}" class="card-img-top" alt="${album.title}" loading="lazy">
                             <div class="card-body">
-                                <h5 class="card-title">${album.title}</h5>
+                                <hcustom class="card-title">${album.title}</hcustom>
                                 <a href="album.html?id=${album.id}" class="animated-button-link">
 
                                     <button class="animated-button">
