@@ -256,7 +256,13 @@ a {
     padding: 20px;
     max-width: 350px;
     margin: 0 auto;
-    text-align: center
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin-left: 10px;
+    }
 }
 
 .card h2 {
@@ -985,6 +991,7 @@ header {
     }
     .burger {
         display: block;
+        margin-right: 27px;
     }
 
     .logo img {
