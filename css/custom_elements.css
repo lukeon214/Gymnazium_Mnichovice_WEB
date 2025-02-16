@@ -1,3 +1,27 @@
+.section-with-border {
+  margin: 5%;
+  position: relative;
+  height: 2px;
+  overflow: hidden;
+}
+
+.section-with-border::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #006297;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 1.0s ease-out;
+}
+
+.section-with-border.animate-line::after {
+  transform: scaleX(1);
+}
+
 .card {
     background: white;
     padding: 20px;
@@ -63,7 +87,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 1000px;
-    margin: 20px auto;
+    margin: 0px auto;
     padding: 25px;
   }
   
@@ -73,8 +97,7 @@
   }
   
   .director-image {
-    background: #000;
-    width: 250px;
+    max-width: 250px;
     border-radius: 4px;
     flex-shrink: 0;
   }
@@ -129,4 +152,57 @@
 .button-right {
     display: flex;
     flex-direction: column-reverse;
+}
+
+.content {
+  width: 65%;
+  max-width: 1000px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.show-more {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+  display: block;
+  margin-top: 10px;
+}
+
+.center {
+  display: flex;
+  justify-content: space-around;
+}
+
+button-more-less {
+  width: fit-content;
+  min-width: 100px;
+  height: 45px;
+  border-radius: 5px;
+  border: 2.5px solid #006297;
+  box-shadow: 0px 0px 20px -20px;
+  cursor: pointer;
+  background-color: #006297;
+  transition: all 0.2s ease-in-out 0ms;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+button-more-less:hover {
+  background-color: #F2F2F2;
+  box-shadow: 0px 0px 20px -18px;
+  color: #444;
+}
+
+button-more-less:active {
+  transform: scale(0.95);
 }

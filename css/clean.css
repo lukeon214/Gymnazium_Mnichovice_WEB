@@ -463,6 +463,14 @@ a {
     margin-top: 5px
 }
 
+.small-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+    font-weight: 700
+}
+
 .mid-text {
     font-size: 1.5rem;
     line-height: 1.4;
@@ -1752,15 +1760,23 @@ logo-font {
 }
 
 .text-wrapper {
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    max-width: 730px;
-    margin: 50px auto;
+    width: 500px;
+    margin: 20px 0px;
     padding: 30px;
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    padding-bottom: 5%;
+    width: 1050px;
+    margin: auto;
 }
 
 .text-container-mid {

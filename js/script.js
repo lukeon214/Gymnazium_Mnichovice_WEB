@@ -13,6 +13,24 @@ document.addEventListener("scroll", () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-line');
+          // Uncomment to animate only once:
+          // observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '0px',
+      threshold: 0.1
+    });
+  
+    document.querySelectorAll('.section-with-border').forEach((el) => {
+      observer.observe(el);
+    });
+  });
 document.getElementById('burger').addEventListener('change', function() {
     const fullscreenSection = document.querySelector('.fullscreen-section');
     if (this.checked) {

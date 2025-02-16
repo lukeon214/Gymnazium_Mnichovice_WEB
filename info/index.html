@@ -7,7 +7,8 @@
   <title>Gymnázium Mnichovice | Info</title>
   <link rel="website icon" type="png" href="../base_content/website_logo_up.png">
   <link rel="website icon" href="%PUBLIC_URL%/website_logo_up.png" />
-  <link rel="stylesheet" href="../css/clean.css?v=10">
+  <link rel="stylesheet" href="../css/clean.css?v=11">
+  <link rel="stylesheet" href="../css/custom_elements.css?v=10">
   <link rel="stylesheet" href="../css/font_styles.css?v=10">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Google Tag Manager -->
@@ -89,6 +90,53 @@
                 <img src="student.png" alt="Student">
             </div>
         </div>
+
+        <section class="highlight-section">
+            <h1 class="big-text">Společne tvoříme budoucnost</h1>
+        </section>
+        <div class="center">
+            <div class="content">
+                <div class="small-text">
+                    Vznik gymnázia reaguje na demografický vývoj obyvatelstva v regionu Praha–východ a nedostatečnou nabídku středních škol se všeobecným zaměřením. Hlavním cílem je zřízení střední školy s předpokládaným otevřením jedné třídy v ročníku. V oboru gymnázium je možné efektivně reagovat na aktuální potřeby studentů a společnosti nabídkou různých seminářů a volitelných předmětů.
+                </div><br>
+        
+                <div id="more-content" class="hidden">
+                    <div class="small-text">
+                        Zřízení mnichovického gymnázia předcházela řada jednání vedení školy se zastupiteli města a školskou radou, proběhl průzkum mezi pedagogy a studenty. Pokud někde vzniká střední škola, musí to být v souladu se strategickými dokumenty státu a kraje. 
+                    </div><br>
+                    <div class="small-text">
+                        Pro výuku budou využity současné prostory základní školy, které jsou ve vlastnictví města Mnichovice. Budovy školy prošly v posledních letech několika velkými rekonstrukcemi (2013 – malá škola náměstí, 2015 – nástavba 3. patro ve škole Bezručova, 2017 – učebna nad malou tělocvičnou, 2018 – nová tělocvična, šatny a výtah, 2019 – podkroví na malé škole na náměstí, 2022 – nová jídelna s 2 novými učebnami).
+                    </div><br>
+                    <div class="small-text">
+                        Na gymnázia a střední školy jsou přijímání studenti na základě přijímacích zkoušek. V našich devátých střídách máme nyní 100 žáků. Hodně se přípravě deváťáků na přechod na střední školy věnujeme.
+                    </div><br>
+                    <div class="small-text">
+                        Těšíme se na mladé lidi, kteří budou studovat v našem městě a určitě nás všechny budou posouvat dál. 
+                    </div><br>
+        
+                    <div class="small-text"><strong>Za celý přípravný tým</strong><br>
+                        Mgr. Marcela Erbeková, ředitelka školy
+                    </div><br>
+                </div>
+        
+                <button-more-less onclick="toggleText()" id="toggle-button">Více</button-more-less>
+            </div>
+        </div>
+        <script>
+            function toggleText() {
+                var moreContent = document.getElementById("more-content");
+                var button = document.getElementById("toggle-button");
+    
+                if (moreContent.style.display === "none" || moreContent.style.display === "") {
+                    moreContent.style.display = "block";
+                    button.innerText = "Méně";
+                } else {
+                    moreContent.style.display = "none";
+                    button.innerText = "Více";
+                }
+            }
+        </script>
+
     <script src="../js/script.js"></script>
 </body>
 </html>
