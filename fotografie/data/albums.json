@@ -3,36 +3,24 @@
       {
           "id": "jidelna",
           "title": "Jídelna",
-          "cover": "img/13.jpg",
+          "cover": "img/jidelna/13.jpg",
           "images": [
-              "fotografie/img/1.jpg",
-              "fotografie/img/2.jpg",
-              "fotografie/img/3.jpg",
-              "fotografie/img/4.jpg",
-              "fotografie/img/5.jpg",
-              "fotografie/img/6.jpg",
-              "fotografie/img/7.jpg",
-              "fotografie/img/8.jpg",
-              "fotografie/img/9.jpg",
-              "fotografie/img/10.jpg",
-              "fotografie/img/11.jpg",
-              "fotografie/img/12.jpg",
-              "fotografie/img/13.jpg",
-              "fotografie/img/14.jpg",
-              "fotografie/img/15.jpg"
+              "fotografie/img/jidelna/1.jpg",
+              "fotografie/img/jidelna/2.jpg",
+              "fotografie/img/jidelna/3.jpg",
+              "fotografie/img/jidelna/4.jpg",
+              "fotografie/img/jidelna/5.jpg",
+              "fotografie/img/jidelna/6.jpg",
+              "fotografie/img/jidelna/7.jpg",
+              "fotografie/img/jidelna/8.jpg",
+              "fotografie/img/jidelna/9.jpg",
+              "fotografie/img/jidelna/10.jpg",
+              "fotografie/img/jidelna/11.jpg",
+              "fotografie/img/jidelna/12.jpg",
+              "fotografie/img/jidelna/13.jpg",
+              "fotografie/img/jidelna/14.jpg",
+              "fotografie/img/jidelna/15.jpg"
           ]
-      },
-      {
-        "id": "dod2025",
-        "title": "Den otevřených dveří 2025",
-        "cover": "img/13.jpg",
-        "images": [
-            "fotografie/img/1.jpg",
-            "fotografie/img/2.jpg",
-            "fotografie/img/3.jpg",
-            "fotografie/img/4.jpg",
-            "fotografie/img/5.jpg"
-        ]
     }
   ]
 }

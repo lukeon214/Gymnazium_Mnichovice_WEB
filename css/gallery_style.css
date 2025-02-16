@@ -64,3 +64,13 @@
     top: 20px;
     z-index: 1000;
 }
+
+.card-section-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 5%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
