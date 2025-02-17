@@ -208,10 +208,6 @@ button-more-less:active {
 }
 
 @media (max-width: 1050px) {
-  .director-card {
-    width: 877px;
-  }
-
   .text-wrapper {
     width: 400px;
     margin: 20px 0px;
@@ -227,6 +223,13 @@ button-more-less:active {
 
   .main-cards {
     flex-direction: column;
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .director-card {
+    display: none;
   }
 }
 
