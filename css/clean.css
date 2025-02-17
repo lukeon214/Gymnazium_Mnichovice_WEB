@@ -981,7 +981,7 @@ header {
 
 @media (max-width: 1211px) {
     .navbar ul li a {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
     }
     .navbar ul {
         gap: 5px;
@@ -2122,3 +2122,70 @@ body-two {
 .text-picture-wrap-picture {
     width: 50%;
 }
+
+@media (max-width: 1050px) {
+    .text-wrapper {
+      width: 300px;
+      margin: 20px 0px;
+      /* padding: 30px; */
+      padding-bottom: 30px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-around;
+      flex: 1;
+    }
+
+    .main-cards {
+        width: 877px;
+    }
+
+    .director-card {
+        width: 825px;
+    }
+
+    .director-title {
+        font-size: 1.2rem;
+    }
+
+    .button-right {
+        display: none;
+    }
+  }
+  
+  @media (max-width: 877px) {
+    .director-card {
+        width: 85%;
+        background: #f4f4f9;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+        max-width: 1000px;
+        margin: 0px auto;
+        /* padding: 25px; */
+    }
+
+    .main-cards {
+        flex-direction: column;
+        width: auto;
+        display: flex;
+        align-items: center;
+      }
+
+    .button-left {
+        display: flex;
+        margin-top: 20px;
+        /* display: none; */
+      }
+
+    .director-image {
+        display: none;
+    }
+
+    .button-right {
+        display: none;
+    }
+
+    .director-title {
+        font-size: 1rem;
+    }
+  }
