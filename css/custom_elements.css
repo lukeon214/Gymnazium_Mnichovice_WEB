@@ -206,3 +206,32 @@ button-more-less:hover {
 button-more-less:active {
   transform: scale(0.95);
 }
+
+@media (max-width: 1050px) {
+  .director-card {
+    width: 877px;
+  }
+
+  .text-wrapper {
+    width: 400px;
+    margin: 20px 0px;
+    /* padding: 30px; */
+    padding-bottom: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+  }
+
+  .main-cards {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 877px) {
+  .director-card {
+    width: 400px;
+  }
+}
