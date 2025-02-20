@@ -59,7 +59,8 @@ p,
 .mid-text-head,
 .normal-text,
 .normal-text-list,
-.bigger-text-clickable {
+.bigger-text-clickable,
+.btn-text {
   font-family: 'Poppins Light', sans-serif;
 }
 
@@ -99,7 +100,7 @@ p,
   }
 
   .bigger-text {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   .mid-text {
@@ -123,8 +124,16 @@ p,
 
 @media (max-width: 768px) {
   .normal-text-list {
+    font-size: 1.1rem;
+  }
+
+  .bigger-text-clickable {
+    font-size: small;
+  }
+
+  .small-text {
     font-size: 1rem;
-    margin: 0 15%;
+    text-align: left;
   }
 
   .mid-text,
