@@ -2149,6 +2149,11 @@ body-two {
     }
   }
   
+.button-right {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
   @media (max-width: 877px) {
     .director-card {
         width: 85%;
