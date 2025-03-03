@@ -1,0 +1,217 @@
+.admission-stats-vertical {
+    padding: 3rem 0;
+    margin: 2rem 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+text-big {
+    color: #333;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+    padding: 0 1rem;
+    font-weight: 700;
+}
+
+.stats-vertical-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: stretch;
+    margin: 2rem 0;
+    min-height: 600px;
+}
+
+.main-stats-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+}
+
+.stat-vertical-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.2s ease;
+    flex: 1;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stat-vertical-box:hover {
+    transform: translateY(-3px);
+}
+
+.primary {
+    border-left: 5px solid #3498db;
+}
+
+.secondary {
+    border-left: 5px solid #006297;
+}
+
+.big-number-vertical {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 1rem 0;
+    color: #2c3e50;
+}
+
+.priority-stats-vertical {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.priority-stats-vertical h3 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
+}
+
+.priority-bars-vertical {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 1rem;
+    position: relative;
+    flex: 1;
+    height: auto !important;
+}
+
+.priority-item-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18%;
+    height: 100%;
+}
+
+.bar-container-vertical {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.bar-vertical {
+    background: linear-gradient(180deg, #3498db, #2980b9);
+    height: var(--percentage);
+    border-radius: 6px 6px 0 0;
+    position: relative;
+    transition: height 0.4s ease;
+    width: 65px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+
+.bar-vertical span {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2c3e50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-weight: 600;
+}
+
+.priority-label-vertical {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.note-vertical {
+    color: #95a5a6;
+    font-size: 0.95rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 3rem auto 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .stats-vertical-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        min-height: auto;
+    }
+    
+    .main-stats-vertical {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .stat-vertical-box {
+        width: 45%;
+        min-width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .priority-bars-vertical {
+        height: 400px;
+        margin: 0;
+    }
+    
+    .bar-vertical {
+        width: 50px;
+    }
+    
+    .bar-vertical span {
+        top: -35px;
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+    
+    .priority-label-vertical {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-vertical-box {
+        width: 100%;
+    }
+    
+    .priority-bars-vertical {
+        height: 350px;
+    }
+    
+    .bar-vertical {
+        width: 40px;
+    }
+    
+    .priority-label-vertical {
+        font-size: 0.9rem;
+    }
+}
