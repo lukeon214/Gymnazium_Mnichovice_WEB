@@ -47,6 +47,7 @@ a {
 .logo-mid img {
     max-height: 70px;
     width: auto;
+    margin-right: 30px;
 }
 
 .navbar {

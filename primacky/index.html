@@ -100,11 +100,10 @@
     </div>
 
     <section class="highlight-section">
-        <h1 class="big-text" id="pocet-prihlasek">Počet přihlášek</h1>
+        <h1 class="big-text" id="pocet-prihlasek">Počet přihlášek 2024/2025 - 1. kolo</h1>
     </section>
     <section class="admission-stats-vertical">
         <div class="container">
-            <text-big>Přijímací řízení 2024/2025 - 1. kolo</text-big>
             
             <div class="stats-vertical-container">
                 <div class="main-stats-vertical">
@@ -156,6 +155,63 @@
             </div>
         </div>
     </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const section = document.querySelector(".admission-stats-vertical");
+    const bars = document.querySelectorAll(".bar-vertical");
+    const numbers = document.querySelectorAll(".bar-vertical span");
+    const bigNumbers = document.querySelectorAll(".big-number-vertical");
+    
+    function animateBars() {
+        bars.forEach((bar) => {
+            const percentage = bar.parentElement.parentElement.style.getPropertyValue("--percentage");
+            bar.style.height = percentage;
+        });
+    }
+
+    function animateNumbers(element, targetValue, duration = 1200) {
+        let startValue = 0;
+        let startTime = null;
+
+        function updateNumber(currentTime) {
+            if (!startTime) startTime = currentTime;
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            element.textContent = Math.floor(progress * targetValue);
+
+            if (progress < 1) {
+                requestAnimationFrame(updateNumber);
+            }
+        }
+
+        requestAnimationFrame(updateNumber);
+    }
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    animateBars();
+                    
+                    numbers.forEach((num) => {
+                        const targetValue = parseInt(num.textContent);
+                        animateNumbers(num, targetValue);
+                    });
+
+                    bigNumbers.forEach((num) => {
+                        const targetValue = parseInt(num.textContent);
+                        animateNumbers(num, targetValue, 1200);
+                    });
+
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.3 }
+    );
+
+    observer.observe(section);
+});
+    </script>
 
     <section class="highlight-section">
         <h1 class="big-text" id="dny-otevrenych-dveri">Dny otevřených dveří</h1>

@@ -112,10 +112,10 @@ text-big {
 
 .bar-vertical {
     background: linear-gradient(180deg, #3498db, #2980b9);
-    height: var(--percentage);
+    height: 0; /* Start from 0 */
     border-radius: 6px 6px 0 0;
     position: relative;
-    transition: height 0.4s ease;
+    transition: height 1.5s ease-in-out;
     width: 65px;
     margin: 0 auto;
     box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
@@ -157,10 +157,12 @@ text-big {
 @media (max-width: 1024px) {
     .stats-vertical-container {
         grid-template-columns: 1fr;
-        gap: 2rem;
-        min-height: auto;
     }
     
+    .priority-stats-vertical {
+        height: 400px;
+    }
+
     .main-stats-vertical {
         flex-direction: row;
         flex-wrap: wrap;
