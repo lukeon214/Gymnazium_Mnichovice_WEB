@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+}
+
+.navbar-mobile {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 280px;
+    height: 100vh;
+    background: #006297;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+    transition: right 0.3s ease-in-out;
+    z-index: 3;
+}
+
+.navbar-mobile ul {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
+
+.navbar-mobile ul li {
+    width: 100%;
+    position: relative;
+}
+
+.navbar-mobile ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 12px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.navbar-mobile ul li a:hover {
+    background: #006297;
+}
+
+.dropdown {
+    display: none;
+    background: #036;
+}
+
+.dropdown li a {
+    padding-left: 25px;
+    font-size: 16px;
+}
+
+.navbar-mobile ul li .dropdown.active {
+    display: block;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.social-icons .social-icon {
+    margin: 0 10px;
+}
+
+.social-icons .social-icon a {
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s;
+}
+
+.social-icons .social-icon a:hover {
+    color: #000297;
+}
+
+.burger {
+    position: fixed;
+    right: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1001;
+}
+
+.burger input {
+    display: none;
+}
+
+@media (max-width: 100000px) {
+    .burger {
+        display: none;
+    }
+}
+
+@media (max-width: 876px) {
+    .burger {
+        display: block;
+    }
+}

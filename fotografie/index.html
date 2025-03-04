@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../css/font_styles_v2.css">
   <link rel="stylesheet" href="../css/gallery_style.css?v=15">
   <link rel="stylesheet" href="../css/custom_text.css?v=15">
+  <link rel="stylesheet" href="../css/mobile-navbar.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -61,50 +62,47 @@
 <div id="school-info"></div>
 <div id="footer"></div>
 
-    <script>
-        function loadComponent(id, file, callback) {
-            fetch(file)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById(id).innerHTML = data;
-                    if (callback) callback();
-                })
-                .catch(error => console.error(`Error loading ${file}:`, error));
+<script>
+    function loadComponent(id, file, callback) {
+        fetch(file)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById(id).innerHTML = data;
+                if (callback) callback();
+            })
+            .catch(error => console.error(`Error loading ${file}:`, error));
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadComponent("header-pagefixed", "../base_page_structure/header-pagefixed.html?v=17", initHeaderScripts);
+        loadComponent("school-info", "../base_page_structure/school-info.html");
+        loadComponent("footer", "../base_page_structure/footer.html");
+
+        function initHeaderScripts() {
+            const burger = document.getElementById("burger");
+            const navbar = document.querySelector(".navbar-mobile");
+            const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+            burger.addEventListener("change", () => {
+                navbar.style.right = burger.checked ? "0" : "-280px";
+            });
+
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const dropdown = toggle.nextElementSibling;
+                    dropdown.classList.toggle("active");
+                });
+            });
+
+            document.addEventListener("click", (e) => {
+                if (!navbar.contains(e.target) && !document.querySelector(".burger").contains(e.target)) {
+                    burger.checked = false;
+                    navbar.style.right = "-280px";
+                }
+            });
         }
-    
-        document.addEventListener("DOMContentLoaded", function () {
-            loadComponent("header-pagefixed", "../base_page_structure/header-pagefixed.html?v=16", initHeaderScripts);
-            loadComponent("school-info", "../base_page_structure/school-info.html");
-            loadComponent("footer", "../base_page_structure/footer.html");
-    
-            function initHeaderScripts() {
-                document.getElementById('burger').addEventListener('change', function() {
-                    const fullscreenSection = document.querySelector('.fullscreen-section');
-                    if (this.checked) {
-                        fullscreenSection.style.display = 'flex';
-                        fullscreenSection.style.opacity = 1;
-                    } else {
-                        fullscreenSection.style.display = 'none';
-                        fullscreenSection.style.opacity = 0;
-                    }
-                });
-    
-                document.querySelectorAll('.fullscreen-navbar li > a').forEach(link => {
-                    link.addEventListener('click', function (e) {
-                        const dropdown = this.nextElementSibling;
-    
-                        if (dropdown && dropdown.classList.contains('dropdown')) {
-                            e.preventDefault();
-                            document.querySelectorAll('.dropdown').forEach(d => {
-                                if (d !== dropdown) d.style.display = 'none';
-                            });
-    
-                            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-                        }
-                    });
-                });
-            }
-        });
-    </script>
+    });
+</script>
 </body>
 </html>

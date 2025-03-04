@@ -53,7 +53,8 @@ a {
 .navbar {
     flex: 1;
     display: flex;
-    justify-content: center
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar ul {
@@ -994,7 +995,6 @@ header {
     }
     .burger {
         display: block;
-        margin-right: 27px;
     }
 
     .logo img {
@@ -2169,6 +2169,7 @@ body-two {
         width: auto;
         display: flex;
         align-items: center;
+        gap: 0px;
       }
 
     .button-left {
