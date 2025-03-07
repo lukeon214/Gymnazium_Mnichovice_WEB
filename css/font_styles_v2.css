@@ -56,6 +56,7 @@ p,
 .expand-button,
 .bigger-text,
 .mid-text,
+.mid-text-test,
 .mid-text-head,
 .normal-text,
 .normal-text-list,
@@ -109,6 +110,12 @@ p,
     letter-spacing: normal;
   }
 
+  .mid-text-test {
+    font-size: 100%;
+    word-spacing: normal;
+    letter-spacing: normal;
+  }
+
   .mid-text-two {
     font-size: 16px;
   }
@@ -137,6 +144,7 @@ p,
   }
 
   .mid-text,
+  .mid-text-test,
   .normal-text-list,
   .mid-text-head,
   .mid-text-two {

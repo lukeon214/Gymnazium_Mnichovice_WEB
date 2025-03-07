@@ -1506,6 +1506,16 @@ body {
     padding-bottom: 5%
 }
 
+.mid-text-test {
+    font-size: 1.45rem;
+    line-height: 1.4;
+    color: #333;
+    max-width: 1350px;
+    margin: 10px 5%;
+    text-align: left;
+    font-weight: 700;
+}
+
 .mid-text {
     font-size: 1.45rem;
     line-height: 1.4;
@@ -1979,6 +1989,7 @@ iframe {
     border: none;
     border-radius: 8px;
     margin-top: 15px;
+    margin-bottom: 50px;
 }
 
 .transport-info p {
