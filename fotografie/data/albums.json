@@ -21,6 +21,37 @@
               "fotografie/img/jidelna/14.webp",
               "fotografie/img/jidelna/15.webp"
           ]
+      },
+      {
+        "id": "dod",
+        "title": "Den otevřených dveří 2025",
+        "cover": "img/dod/24.webp",
+        "images": [
+            "fotografie/img/dod/1.webp",
+            "fotografie/img/dod/2.webp",
+            "fotografie/img/dod/3.webp",
+            "fotografie/img/dod/4.webp",
+            "fotografie/img/dod/5.webp",
+            "fotografie/img/dod/6.webp",
+            "fotografie/img/dod/7.webp",
+            "fotografie/img/dod/8.webp",
+            "fotografie/img/dod/9.webp",
+            "fotografie/img/dod/10.webp",
+            "fotografie/img/dod/11.webp",
+            "fotografie/img/dod/12.webp",
+            "fotografie/img/dod/13.webp",
+            "fotografie/img/dod/14.webp",
+            "fotografie/img/dod/15.webp",
+            "fotografie/img/dod/16.webp",
+            "fotografie/img/dod/17.webp",
+            "fotografie/img/dod/18.webp",
+            "fotografie/img/dod/19.webp",
+            "fotografie/img/dod/20.webp",
+            "fotografie/img/dod/21.webp",
+            "fotografie/img/dod/22.webp",
+            "fotografie/img/dod/23.webp",
+            "fotografie/img/dod/24.webp"
+        ]
     }
   ]
 }
