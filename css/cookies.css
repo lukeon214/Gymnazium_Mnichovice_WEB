@@ -1,0 +1,77 @@
+/* Cookie Consent Banner */
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #006297;
+    color: #fff;
+    padding: 15px 20px;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9999;
+  }
+  
+  .cookie-text a {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .cookie-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .cookie-btn {
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .accept {
+    background: #003d7e;
+    color: white;
+  }
+  
+  .manage {
+    background: #006297;
+    color: white;
+  }
+  
+  /* Cookie Settings Modal */
+  .cookie-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 10000;
+  }
+  
+  .cookie-modal-content h3 {
+    margin-top: 0;
+  }
+  
+  .cookie-category {
+    margin: 15px 0;
+  }
+  
+  .cookie-category input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .save {
+    background: #006297;
+    color: white;
+  }
+  
+  .close {
+    background: #006297;
+    color: white;
+  }

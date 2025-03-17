@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/custom_elements.css?v=17">
   <link rel="stylesheet" href="css/font_styles_v2.css">
   <link rel="stylesheet" href="css/mobile-navbar.css">
+  <link rel="stylesheet" href="css/cookies.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -39,6 +40,45 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLLQR59P"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+<!-- Cookie Consent Banner -->
+<div id="cookieConsent" class="cookie-consent">
+    <div class="cookie-text">
+      <p>Pro zlepšení vašeho zážitku používáme soubory cookie. Pokračováním souhlasíte s naším používáním souborů cookie.
+        <a href="/privacy-policy">Více</a>
+      </p>
+    </div>
+    <div class="cookie-buttons">
+      <button id="acceptCookies" class="cookie-btn accept">Přijmout vše</button>
+      <button id="manageCookies" class="cookie-btn manage">Nastavení</button>
+    </div>
+  </div>
+  
+  <!-- Cookie Settings Modal (hidden by default) -->
+  <div id="cookieSettings" class="cookie-modal">
+    <div class="cookie-modal-content">
+      <h3>Nastavení Cookies</h3>
+      <form id="cookieForm">
+        <div class="cookie-category">
+          <label>
+            <input type="checkbox" name="necessary" checked disabled>
+            Nezbytné Cookies
+          </label>
+          <p>Tyto cookies jsou nezbytné pro fungování webu.</p>
+        </div>
+        <div class="cookie-category">
+          <label>
+            <input type="checkbox" name="analytics">
+            Analytics Cookies
+          </label>
+          <p>Tyto cookies nám pomáhají v analýzach webu pro lepší přístupnost a správu.</p>
+        </div>
+        <div class="cookie-modal-buttons">
+          <button type="button" id="savePreferences" class="cookie-btn save">Uložit</button>
+          <button type="button" id="closeSettings" class="cookie-btn close">Zavřít</button>
+        </div>
+      </form>
+    </div>
+  </div>
 <div id="header"></div>
     <div id="header-container"></div>
     <section class="hero">
@@ -180,6 +220,62 @@
     <div id="footer"></div>
 
     <script>
+        // Cookies START
+        document.addEventListener('DOMContentLoaded', function() {
+        const cookieConsent = document.getElementById('cookieConsent');
+        const cookieSettings = document.getElementById('cookieSettings');
+        const acceptCookies = document.getElementById('acceptCookies');
+        const manageCookies = document.getElementById('manageCookies');
+        const savePreferences = document.getElementById('savePreferences');
+        const closeSettings = document.getElementById('closeSettings');
+
+        // Check if consent already given
+        if (!localStorage.getItem('cookiesAccepted')) {
+            cookieConsent.style.display = 'flex'; // Show banner
+        }
+
+        // Accept All Cookies
+        acceptCookies.addEventListener('click', function() {
+            localStorage.setItem('cookiesAccepted', 'all');
+            cookieConsent.style.display = 'none';
+            enableAnalyticsCookies(); // Load Google Analytics if needed
+        });
+
+        // Open Settings Modal
+        manageCookies.addEventListener('click', function() {
+            cookieSettings.style.display = 'block';
+        });
+
+        // Close Settings Modal
+        closeSettings.addEventListener('click', function() {
+            cookieSettings.style.display = 'none';
+        });
+
+        // Save Preferences
+        savePreferences.addEventListener('click', function() {
+            const analyticsChecked = document.querySelector('input[name="analytics"]').checked;
+            localStorage.setItem('cookiesAccepted', analyticsChecked ? 'analytics' : 'necessary');
+            cookieConsent.style.display = 'none';
+            cookieSettings.style.display = 'none';
+
+            if (analyticsChecked) {
+            enableAnalyticsCookies(); // Load Google Analytics
+            }
+        });
+
+        // Function to load analytics scripts (e.g., Google Analytics)
+        function enableAnalyticsCookies() {
+            if (localStorage.getItem('cookiesAccepted') === 'analytics' || localStorage.getItem('cookiesAccepted') === 'all') {
+            // Load your analytics script here
+            console.log('Analytics cookies enabled');
+            }
+        }
+
+        // Optional: Initialize analytics based on saved preferences
+        enableAnalyticsCookies();
+        });
+        // Cookies END
+
         function loadComponent(id, file, callback) {
             fetch(file)
                 .then(response => response.text())
