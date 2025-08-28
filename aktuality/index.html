@@ -40,6 +40,173 @@
         <h1 class="big-text">Aktuality</h1>
     </section>
 
+    <section id="ak-event" class="ak-event" aria-labelledby="ak-event-title" lang="cs">
+        <div class="ak-container">
+          <!-- Info card -->
+          <div class="ak-card" role="region" aria-labelledby="ak-event-title" tabindex="0">
+            <h2 id="ak-event-title">Slavnostní zahájení školního roku</h2>
+            <p class="ak-lead">pro první studenty <strong>mnichovického gymnázia</strong></p>
+            <p class="ak-datetime">
+              <strong>1. září 2025 — v 8.00</strong>
+            </p>
+            <address class="ak-address">
+              na <strong>Masarykově náměstí</strong><br>
+              Mnichovice
+            </address>
+      
+            <p class="ak-actions">
+                <a href="https://www.google.com/maps/place/Masarykovo+n%C3%A1m.,+251+64+Mnichovice,+%C4%8Cesko/@49.9365938,14.708995,315m/data=!3m2!1e3!4b1!4m6!3m5!1s0x470b883978326545:0x90d2d9429ae2e189!8m2!3d49.9365938!4d14.7098444!16s%2Fg%2F1vxw6_1p?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" class="animated-button-link">
+                    <button class="signin">
+                        <svg
+                          viewBox="0 0 256 262"
+                          preserveAspectRatio="xMidYMid"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"
+                            fill="#4285F4"
+                          ></path>
+                          <path
+                            d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"
+                            fill="#34A853"
+                          ></path>
+                          <path
+                            d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"
+                            fill="#FBBC05"
+                          ></path>
+                          <path
+                            d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"
+                            fill="#EB4335"
+                          ></path>
+                        </svg>
+                        Google maps
+                      </button>                      
+                    <style>
+                        .signin {
+                            display: flex;
+                            padding: 0.5rem 1.4rem;
+                            font-size: 0.875rem;
+                            line-height: 1.25rem;
+                            font-weight: 700;
+                            text-align: center;
+                            font-family: "Montserrat", sans-serif;
+                            vertical-align: middle;
+                            align-items: center;
+                            border-radius: 0.5rem;
+                            border: 1px solid rgba(255, 255, 255, 0.25);
+                            gap: 0.75rem;
+                            color: #c4d2dc;
+                            background-color: #006290;
+                            cursor: pointer;
+                            transition: all 0.25s cubic-bezier(0, 0.87, 0.12, 1);
+                        }
+
+                            .signin:hover {
+                            transform: scale(1.025);
+                            }
+
+                            .signin:active {
+                            transform: scale(0.975);
+                            }
+
+                            button svg {
+                            height: 24px;
+                            width: auto;
+                            }
+                    </style>
+                </a>
+            </p>
+          </div>
+      
+          <div class="ak-map" role="region" aria-label="Mapa: Masarykovo náměstí, Mnichovice">
+            <iframe 
+              src="https://www.google.com/maps?q=49.9365938,14.7098444&hl=cs&z=17&output=embed" 
+              width="600px" 
+              height="300" 
+              style="border:0;" 
+              allowfullscreen 
+              loading="lazy" 
+              title="Mapa: Masarykovo náměstí, Mnichovice">
+            </iframe>
+            <noscript>
+              <p><a href="https://www.google.com/maps/place/Masarykovo+n%C3%A1m.,+251+64+Mnichovice,+%C4%8Cesko/" target="_blank" rel="noopener noreferrer">Zobrazit mapu (JavaScript vypnuto)</a></p>
+            </noscript>
+          </div>
+        </div>
+      </section>
+      <style>
+      .ak-event { padding: 18px; background: transparent; }
+      .ak-container{
+        display: flex;
+        gap: var(--ak-gap);
+        align-items: stretch;
+        justify-content: center;
+        max-width: 1050px;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 8px;
+      }
+    
+      .ak-card{
+        background: white;
+        border-radius: 8px;
+        padding: 18px;
+        min-width: 320px;
+        flex: 0 1 380px;
+        color: var(--ak-text);
+      }
+    
+      .ak-card h2{
+        margin: 6px 0 6px;
+        font-size: 1.25rem;
+        color: #006297;
+      }
+      .ak-lead { margin: 0 0 8px; font-weight: 600; }
+      .ak-datetime { margin: 0 0 10px; }
+      .ak-address { font-style: normal; margin: 0 0 14px; }
+    
+      .ak-actions {
+        margin-top: 6px;
+        display: flex;
+        justify-content: space-around;
+}
+      .ak-btn{
+        display:inline-block;
+        text-decoration:none;
+        background: var(--ak-primary);
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 8px;
+        font-weight: 600;
+        border: none;
+        box-shadow: 0 6px 18px rgba(0,98,151,0.18);
+      }
+    
+      .ak-map{
+        min-width: 260px;
+        border-radius: var(--ak-radius);
+        overflow: hidden;
+        width: 50%;
+      }
+      .ak-map iframe{
+        width:100%;
+        min-height: 300px;
+        border: 0;
+        display:block;
+      }
+    
+      @media (max-width: 860px){
+        .ak-container{
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .ak-card{ order: 1; }
+        .ak-map{ order: 2; min-height: 260px; }
+      }
+    
+      .ak-address strong{ font-weight:700; }
+    </style>
+
     <iframe src="https://www.instagram.com/gymnazium_mnichovice/embed/" 
         frameborder="0" 
         scrolling="yes" 
